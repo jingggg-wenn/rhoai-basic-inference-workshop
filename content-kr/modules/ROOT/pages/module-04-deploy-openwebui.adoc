@@ -1,4 +1,4 @@
-:imagesdir: ../../ROOT/assets/images
+:imagesdir: ../assets/images
 
 [#deploy-openwebui-kr]
 = Open WebUI 배포

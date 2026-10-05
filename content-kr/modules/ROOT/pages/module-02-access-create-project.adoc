@@ -1,4 +1,4 @@
-:imagesdir: ../../ROOT/assets/images
+:imagesdir: ../assets/images
 
 [#access-project-kr]
 = OpenShift AI 접속 및 프로젝트 생성

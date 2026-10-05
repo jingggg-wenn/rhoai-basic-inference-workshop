@@ -3,7 +3,6 @@ title: Basic Inferencing on Red Hat AI
 version: main
 nav:
   - modules/ROOT/nav.adoc
-  - modules/KR/nav.adoc
 
 asciidoc:
   attributes:
