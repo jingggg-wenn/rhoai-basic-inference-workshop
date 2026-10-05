@@ -67,7 +67,9 @@ Configure the deployment settings. The key fields to verify:
 | `1`
 |===
 
-image::model-deployment/img-model-deployment-form-3.png[Model deployment configuration with llm-d and GPU profile]
+image::model-deployment/img-model-deployment-form-3-1.png[Model deployment name and deployment method selection with llm-d]
+
+image::model-deployment/img-model-deployment-form-3-2.png[Topology, hardware profile, routing, and replica count settings]
 
 Click *Next* to proceed.
 
