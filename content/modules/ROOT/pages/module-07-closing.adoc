@@ -1,0 +1,35 @@
+:imagesdir: ../assets/images
+
+[#closing]
+= Closing and Resources
+
+You have completed the hands-on portion of the Basic Inferencing workshop.
+
+== What You Accomplished
+
+[cols="1,3",options="header"]
+|===
+| Module | What You Did
+
+| 2 - Access and Project Setup
+| Logged in to {productname-short} and created a Data Science project
+
+| 3 - Deploy a Model
+| Deployed an LLM from the model catalog using the llm-d serving runtime on a GPU node
+
+| 4 - Deploy Open WebUI
+| Deployed Open WebUI as a self-hosted chat interface in your project
+
+| 5 - MaaS and API Key
+| Created a MaaS subscription and generated an API key for authenticated model access
+
+| 6 - Connect Model
+| Connected the MaaS model endpoint to Open WebUI and verified inference end-to-end
+|===
+
+== Additional Resources
+
+* https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/{rhoai-version}[{productname-long} {rhoai-version} Documentation]
+* https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/{rhoai-version}/html/serving_models[Serving Models on {productname-short}]
+* https://docs.vllm.ai/en/latest/[vLLM Documentation]
+* https://docs.openwebui.com/[Open WebUI Documentation]

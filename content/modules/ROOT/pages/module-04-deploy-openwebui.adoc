@@ -1,0 +1,76 @@
+:imagesdir: ../assets/images
+
+[#deploy-openwebui]
+= Deploy Open WebUI and Connect Your Model
+
+In this module, you will deploy Open WebUI -- a self-hosted chat interface similar to ChatGPT -- and connect it to your model. You will use the {ocp-short} Web Terminal for all command-line steps.
+
+== Step 4.1: Open the Web Terminal
+
+. Access the *{ocp-short} Console* by clicking the grid icon (3x3 squares) in the top-right corner of the {productname-short} dashboard, then select *{ocp-short} Console*.
+. Click the *>_* icon in the top-right masthead of the {ocp-short} Console to open the Web Terminal.
+
+This gives you an in-browser terminal with `oc`, `git`, and `sed` pre-installed. No local CLI tools are needed.
+
+== Step 4.2: Clone the Workshop Repository
+
+[source,sh,role="execute"]
+----
+git clone https://github.com/jingggg-wenn/rhoai-basic-inference-workshop.git
+----
+
+[source,sh,role="execute"]
+----
+cd rhoai-basic-inference-workshop
+----
+
+== Step 4.3: Set Your Environment Variables
+
+Set your namespace (for example `user-05` or `admin-02`):
+
+[source,sh,role="execute"]
+----
+export NAMESPACE=user-XX
+----
+
+== Step 4.4: Deploy Open WebUI
+
+Open WebUI deploys the following resources into your namespace:
+
+* *ConfigMap* -- base configuration for Open WebUI
+* *PersistentVolumeClaim* -- 2Gi storage for Open WebUI data
+* *Deployment* -- the Open WebUI container
+* *Service* -- internal cluster access on port 8080
+* *Route* -- external HTTPS URL for your browser
+
+Make sure your `NAMESPACE` variable is set and you are in the workshop repo directory, then deploy:
+
+[source,sh,role="execute"]
+----
+sed "s/\${NAMESPACE}/$NAMESPACE/g" manifests/open-webui.yaml | oc apply -f -
+----
+
+== Step 4.5: Wait for Open WebUI
+
+[source,sh,role="execute"]
+----
+oc rollout status deployment/open-webui -n $NAMESPACE --timeout=120s
+----
+
+== Step 4.6: Get the Open WebUI URL
+
+[source,sh,role="execute"]
+----
+echo "https://$(oc get route open-webui -n $NAMESPACE -o jsonpath='{.spec.host}')"
+----
+
+You can also find the URL from the OpenShift console: *Networking* > *Routes* > `open-webui`.
+
+image::openwebui/img-ocp-route-openwebui.png[OpenShift console showing the Open WebUI route]
+
+Copy this URL and open it in your browser.
+
+image::openwebui/img-openwebui-default.png[Open WebUI default landing page]
+
+
+Once Open WebUI is running, proceed to Module 5 to set up your MaaS API key, then Module 6 to connect your model.

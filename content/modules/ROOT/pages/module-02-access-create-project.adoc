@@ -1,0 +1,67 @@
+:imagesdir: ../assets/images
+
+[#access-project]
+= Access {productname-short} and Create Your Project
+
+In this module, you will log in to the {productname-long} dashboard and create a Data Science project that serves as your workspace for deploying models and running experiments.
+
+== Step 2.1: Log In to {productname-short}
+
+. Open your web browser (Chrome or Firefox recommended).
+. Navigate to the *{productname-short} Dashboard URL* provided by your instructor.
+. You will be redirected to a login page. Select the login provider specified by your instructor (for example, `workshop-users` or `htpasswd`).
+. Enter your username and password.
+. Click *Log in*.
+
+You should now see the *OpenShift AI Dashboard* with a left sidebar showing menu items such as Projects, AI hub, Gen AI studio, and more.
+
+image::ocp-rhoai-portal/img-rhoai-portal.png[OpenShift AI Dashboard]
+
+// TODO: Add screenshot of landing page
+// image::landing-page.png[{productname-short} Dashboard]
+
+[TIP]
+====
+Can not log in? Double-check your username and password with your instructor.
+====
+
+[TIP]
+====
+To switch between the *OpenShift AI Dashboard* and the *OpenShift Console* (needed later for the Web Terminal), click the grid icon (3x3 squares) in the top-right corner, then select the target application.
+
+image::ocp-rhoai-portal/img-access-ocp.png[Switching between OpenShift AI and OpenShift Console]
+====
+
+== Step 2.2: Create a New Project
+
+A project (also known as a Kubernetes namespace) is your workspace where you will deploy models, create workbenches, and run experiments.
+
+. Click *Projects* in the left sidebar.
++
+// TODO: Add screenshot of projects page
+// image::projects-page.png[Projects page]
+
+. Click the *Create project* button (top right).
+
+. Fill in the form:
++
+[cols="1,2",options="header"]
+|===
+| Field | What to Enter
+
+| *Name*
+| `user-XX` (use your assigned number, for example `user-05`)
+
+| *Description*
+| `My workshop project` (optional)
+|===
+
+. Click *Create*.
+
+// TODO: Add screenshot of create project dialog
+// image::create-project.png[Create project dialog]
+
+You should now see your project `user-XX` with tabs for Overview, Workbenches, Pipelines, Deployments, Connections, and more.
+
+// TODO: Add screenshot of project overview
+// image::project-overview.png[Project overview]

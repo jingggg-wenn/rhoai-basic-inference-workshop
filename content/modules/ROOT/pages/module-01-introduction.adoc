@@ -1,0 +1,71 @@
+:imagesdir: ../assets/images
+
+[#introduction]
+= Introduction
+
+This workshop is a hands-on guide for deploying and testing AI model inference on OpenShift AI 3.5. You will deploy a model from the model catalog, set up a chat interface, and test both direct chat and document-based retrieval-augmented generation (RAG).
+
+== What You Will Learn
+
+By the end of this workshop, you will be able to:
+
+* Create a Data Science project in {productname-short}
+* Deploy an AI model with tool calling enabled using the vLLM serving runtime
+* Deploy Open WebUI as a self-hosted chat interface with RAG support
+* Connect Open WebUI to your vLLM model endpoint
+* Test LLM chat and document-based RAG
+
+== Workshop Structure
+
+[cols="1,3,1",options="header"]
+|===
+| Module | Title | Type
+
+| 1
+| Introduction
+| Overview
+
+| 2
+| Access OpenShift AI Portal and Create Your Project
+| Hands-on
+
+| 3
+| Deploy a Model
+| Hands-on
+
+| 4
+| Deploy Open WebUI
+| Hands-on
+
+| 5
+| Set Up MaaS and API Key
+| Hands-on
+
+| 6
+| Connect MaaS Model to Open WebUI
+| Hands-on
+
+| 7
+| Closing and Resources
+| Summary
+|===
+
+== Prerequisites
+
+Before starting, confirm the following are ready:
+
+* A running {ocp} cluster with {rhoai-short} {rhoai-version} installed
+* At least one GPU node available in the cluster (for example, NVIDIA L4, L40S, or A100)
+* A GPU hardware profile created by your administrator
+* Your login credentials (username and password provided by your instructor)
+
+== Your User Account 
+
+Throughout this guide, you will see `user-XX` or `admin-XX`. Replace `XX` with your assigned number.
+
+For example, if you are *user 5*, then:
+
+* `user-XX` becomes `user-05`
+* Your project name is `user-05`
+
+Always use two digits: user05 = `user-05`, admin02 = `admin-02`.

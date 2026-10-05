@@ -1,0 +1,53 @@
+= Basic Inferencing on Red Hat AI
+
+A hands-on workshop for deploying and testing AI model inference on {rhoai} {rhoai-version}.
+
+Participants learn to create a data science project, deploy a model from the model catalog using the vLLM runtime, connect it to Open WebUI, and test chat and RAG capabilities.
+
+Created: 2026-10-05
+
+---
+
+=== Links
+
+* *Live docs:* https://jingggg-wenn.github.io/rhoai-basic-inference-workshop/modules/main/index.html
+* *Repository:* https://github.com/jingggg-wenn/rhoai-basic-inference-workshop
+
+---
+
+=== Local Development
+
+==== Using Containers (Recommended)
+
+[source,sh]
+----
+podman run --rm --name antora -v $PWD:/antora -p 8080:8080 -i -t ghcr.io/juliaaano/antora-viewer
+----
+
+For SELinux environments:
+
+[source,sh]
+----
+podman run --rm --name antora -v $PWD:/antora:z -p 8080:8080 -i -t ghcr.io/juliaaano/antora-viewer
+----
+
+Open http://localhost:8080 in your browser.
+
+==== Directory Structure
+
+[source,text]
+----
+./content/modules/ROOT/
+  assets/
+    images/                           # Screenshots and diagrams
+  nav.adoc                            # Navigation sidebar
+  pages/
+    index.adoc                        # Landing page
+    module-01-introduction.adoc       # What you will learn, prerequisites
+    module-02-access-create-project.adoc  # Log in and create project
+    module-03-deploy-model.adoc       # Deploy model from catalog
+    module-04-deploy-openwebui.adoc   # Deploy Open WebUI
+    module-05-maas-setup.adoc         # Set up MaaS subscription and API key
+    module-06-connect-model.adoc      # Connect model to Open WebUI
+    module-07-closing.adoc            # Summary and resources
+----

@@ -1,0 +1,130 @@
+:imagesdir: ../assets/images
+
+[#maas-setup]
+= Set Up Model-as-a-Service (MaaS)
+
+In this module, you will configure Model-as-a-Service (MaaS) for the model you deployed in Module 3. MaaS provides a centralized API gateway with authentication, rate limiting, and usage tracking -- similar to how commercial AI providers expose their models.
+
+By the end of this module, you will have:
+
+* A MaaS subscription that controls access to your model
+* An API key (`sk-oai-*`) for authenticated inference requests
+* A verified external endpoint accessible from outside the cluster
+
+== Why MaaS?
+
+When you deploy a model with `LLMInferenceService` (llm-d), the model is exposed through the MaaS gateway rather than a direct route. This provides:
+
+* *Authentication* -- API keys or OpenShift tokens required for access
+* *Rate limiting* -- Token-based quotas per subscription
+* *Usage tracking* -- Centralized visibility into token consumption
+* *Multi-tenant access* -- Multiple teams can share the same model with separate quotas
+
+== Step 5.1: Verify Your Model is Ready
+
+Before setting up MaaS, confirm your model from Module 3 is running:
+
+. In the {productname-short} dashboard, navigate to *AI hub* > *Models* > *Deployments*.
+. Select your project and verify the model shows *Ready* (green status).
+. Click *Internal and external endpoint* to confirm the external MaaS URL is available.
+
+The external URL follows the pattern:
+
+[source,text]
+----
+https://maas.apps.<cluster-domain>/<namespace>/<model-name>/v1
+----
+
+== Step 5.2: Create a MaaS Subscription (Admin)
+
+A subscription defines which groups can access which models and sets token rate limits.
+
+. In the {productname-short} dashboard, navigate to *Settings* > *MaaS governance*.
+
+image::maas-setup/img-maas-governance.png[MaaS governance page showing Subscriptions tab]
+
+. Click *Create subscription*.
+. Fill in the subscription form with the following values:
++
+[cols="1,2",options="header"]
+|===
+| Field | Value
+
+| *Name*
+| `workshop-gemma4` (or a name matching your model)
+
+| *Priority*
+| `20` (higher numbers indicate higher priority)
+
+| *Groups*
+| Select `rhods-admins` (or the group provided by your instructor)
+
+| *Models*
+| Click *Add models* and select your deployed model
+
+| *Token rate limits*
+| `10000` tokens per `1` minute (set after adding the model)
+
+| *Create authorization policy*
+| Leave checked (auto-creates the matching auth policy)
+|===
+
+image::maas-setup/img-maas-subs-1.png[Create subscription form with name, priority, and group]
+
+. Click *Add models* to open the model selection dialog. Select your deployed model and click *Add models*.
+
+image::maas-setup/img-maas-subs-2.png[Add models dialog showing deployed model]
+
+. After adding the model, click *Add token limit* next to the model entry.
+
+image::maas-setup/img-maas-subs-3.png[Model added with Add token limit prompt]
+
+. Set the token limit (e.g., `10000` tokens per `1` minute) and click *Save*.
+
+image::maas-setup/img-maas-subs-4.png[Edit subscription token limits dialog]
+
+. Leave *Create authorization policy* checked, then click *Create subscription*.
+
+image::maas-setup/img-maas-subs-5.png[Completed subscription form ready to submit]
+
+You should see the successful creation of the subscription and authorization policy shortly.
+
+image::maas-setup/img-maas-subs-6.png[Subscription created with Ready status]
+
+Click the *Authorization policies* tab to verify the policy was also created.
+
+image::maas-setup/img-maas-subs-7.png[Authorization policy created for the subscription]
+
+
+== Step 5.3: Generate an API Key
+
+. Navigate to *Gen AI Studio* > *API keys*.
+
+image::maas-setup/img-apikey-1.png[Gen AI Studio API keys page]
+
+. Click *Create API key*.
+. Fill in the form:
+
+image::maas-setup/img-apikey-2.png[Create API key dialog with name, subscription, and expiration]
+
++
+[cols="1,2",options="header"]
+|===
+| Field | Value
+
+| *Name*
+| A descriptive name (e.g., `workshop-apikey`)
+
+| *Subscription*
+| Select `workshop-gemma4` (the subscription from Step 5.2)
+
+| *Expiration*
+| `30 days` (or choose a value that suits your workshop duration)
+|===
+
+. Click *Create API key*.
+. Copy the generated API key immediately using the copy icon. It starts with `sk-oai-` and is shown only once.
+
+image::maas-setup/img-apikey-3.png[API key created dialog showing the generated key]
+
+IMPORTANT: Save this API key securely. You cannot retrieve it again after closing this dialog.

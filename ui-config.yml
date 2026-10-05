@@ -1,0 +1,11 @@
+---
+type: showroom
+
+default_width: 30
+persist_url_state: true
+
+tabs:
+  - name: OpenShift AI Dashboard
+    url: 'https://data-science-gateway.apps.cluster-guid.guid.sandbox.opentlc.com/'
+  - name: OpenShift Console
+    url: 'https://console-openshift-console.apps.cluster-guid.guid.sandbox.opentlc.com'

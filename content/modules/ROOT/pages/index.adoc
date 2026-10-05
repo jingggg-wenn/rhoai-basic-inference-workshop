@@ -1,0 +1,7 @@
+= Basic Inferencing on Red Hat AI
+
+Welcome to the workshop. Click below to get started.
+
+xref:module-01-introduction.adoc#introduction[Get Started -- Module 1: Introduction]
+
+Source repository: https://github.com/jingggg-wenn/rhoai-basic-inference-workshop

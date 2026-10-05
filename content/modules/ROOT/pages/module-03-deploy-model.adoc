@@ -1,0 +1,152 @@
+:imagesdir: ../assets/images
+
+[#deploy-model]
+= Model Catalog Overview
+
+In this module, you will deploy an AI model from the model catalog using the vLLM serving runtime (OOTB).
+
+Models in the catalog are packaged as OCI container images and pulled from the Red Hat registry, so provenance is guaranteed and no S3 storage credentials are needed.
+
+To browse the catalog, navigate to *AI hub* > *Models* in the left sidebar, then select the *Catalog* tab. You can search and filter by model name, task type, or validated status.
+
+image::model-deployment/img-model-catalog.png[Model Catalog in OpenShift AI]
+
+Click on a model to open its model card. The card shows the model description, capabilities, benchmark data, and -- on the right side under *Model details* -- the *Model location* field containing the OCI registry address. This is the URI you will use during deployment.
+
+image::model-deployment/img-gemma4-model-card.png[Gemma 4 model card showing model location from Red Hat registry]
+
+== Step 3.1: Search for the Model
+
+In the model catalog, search for `gemma-4-E4B` in the search bar. Select the *gemma-4-E4B-it* model card. We will be deploying this model for this exercise.
+
+image::model-deployment/img-gemma4-model.png[Searching for gemma-4-E4B in the model catalog]
+
+== Step 3.2: Deploy the Model
+
+From the model card, click the *Deploy model* button in the top-right corner.
+
+image::model-deployment/img-deploy-gemma4-model.png[Deploy model button on the Gemma 4 model card]
+
+This opens the *Deploy a model* wizard. In the first step (*Preconfigure deployment*), select your project (`user-XX`) from the *Project* dropdown, then click *Next*.
+
+image::model-deployment/img-model-deployment-form-1.png[Select your project in the deployment wizard]
+
+== Step 3.3: Wizard Step 2 -- Model Details
+
+Since you deployed from the model catalog, the model details are pre-populated. The URI, model name, and model type are all imported automatically. Leave everything as is and click *Next*.
+
+image::model-deployment/img-model-deployment-form-2.png[Model details pre-populated from the model catalog]
+
+== Step 3.3: Wizard Step 3 -- Model Deployment
+
+Configure the deployment settings. The key fields to verify:
+
+[cols="1,2",options="header"]
+|===
+| Field | What to Select or Enter
+
+| *Model deployment name*
+| Auto-populated (e.g., `RedHatAI/gemma-4-E4B-it`)
+
+| *Deployment method*
+| Select *LLM inference service with llm-d*
+
+| *Topology type*
+| `Single node`
+
+| *Topology configuration*
+| `Single node (default)`
+
+| *Hardware profile*
+| Select `gpu-profile` (or the GPU profile provided by your administrator)
+
+| *Routing*
+| `Default optimized routing`
+
+| *Replica count*
+| `1`
+|===
+
+image::model-deployment/img-model-deployment-form-3.png[Model deployment configuration with llm-d and GPU profile]
+
+Click *Next* to proceed.
+
+== Step 3.4: Wizard Step 4 -- Advanced Settings
+
+This step configures model availability and access.
+
+[cols="1,2",options="header"]
+|===
+| Setting | What to Do
+
+| *Add as AI asset endpoint*
+| Check this box (allows testing in the Playground)
+
+| *Publish as MaaS*
+| Check this box (makes the model accessible through the gateway API)
+
+| *Gateway*
+| Select `maas-default-gateway \| openshift-ingress`
+|===
+
+Leave *Token authentication*, *Add custom runtime arguments*, and *Add custom runtime environment variables* unchecked for this exercise.
+
+image::model-deployment/img-model-deployment-form-4.png[Advanced settings with AI asset endpoint and MaaS enabled]
+
+Click *Next* to proceed.
+
+== Step 3.5: Wizard Step 5 -- Review and Deploy
+
+Review the configuration summary. Verify the key settings:
+
+* *Model location:* URI
+* *Location details:* `oci://registry.redhat.io/rhai/modelcar-redhatai-gemma-4-e4b-it:3.0`
+* *Hardware profile:* gpu-profile
+* *Deployment method:* LLM inference service with llm-d
+* *Topology:* Single node
+* *Replicas:* 1
+* *AI asset endpoint:* Yes
+* *MaaS endpoint:* Yes
+* *Gateway:* maas-default-gateway | openshift-ingress
+
+image::model-deployment/img-model-deployment-form-5.png[Review page showing deployment summary]
+
+Click *Deploy model* to start the deployment.
+
+== Step 3.6: Monitor Deployment Status
+
+After clicking Deploy, you are taken to the Deployments tab. Watch the status indicator next to your model:
+
+image::model-deployment/img-model-deployment-pending.png[Model deployment in Starting/Pending state]
+
+[cols="1,2",options="header"]
+|===
+| Status | What It Means
+
+| *Starting*
+| Container image is being pulled and model is loading
+
+| *Ready*
+| Model is ready to serve requests
+
+| *Failed*
+| Something went wrong (check events)
+|===
+
+== Step 3.7: Verify the Model is Running
+
+Once the status shows *Ready* (green), your model is deployed and serving requests.
+
+image::model-deployment/img-model-deployment-ready.png[Model deployment showing Ready status]
+
+NOTE: You can also access this page from *Projects* > _(your project)_ > *Deployments*.
+
+. Click the expand arrow (*>*) to the left of the model name to see deployment details.
+
+. Click *Internal and external endpoint* to reveal the external inference URL.
+
+image::model-deployment/img-model-deployment-endpoint.png[Inference endpoint popup showing external URL]
+
+. *Copy the Inference endpoint URL* -- the external route URL shown under *External*. Click the copy icon next to it.
+
+IMPORTANT: Keep the URL handy. You will need the `MODEL_URL` in the subsequent module.
