@@ -71,7 +71,7 @@ image::maas-setup/img-maas-governance.png[MaaS governance page showing Subscript
 +
 image::maas-setup/img-maas-subs-1.png[Create subscription form with name, priority, and group]
 
-. Click *Add models* to open the model selection dialog. Select your deployed model and click *Add models*.
+. Click *Add models* to open the model selection dialog. You may see models deployed in other namespaces since you have admin rights. Make sure to select your own model deployment in your unique namespace (`user-XX`) for the subscription, then click *Add models*.
 +
 image::maas-setup/img-maas-subs-2.png[Add models dialog showing deployed model]
 
