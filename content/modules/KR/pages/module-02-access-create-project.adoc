@@ -1,0 +1,7 @@
+:imagesdir: ../../ROOT/assets/images
+
+[#access-project-kr]
+= OpenShift AI 접속 및 프로젝트 생성
+
+// TODO: 영어 원본을 한국어로 번역
+// 원본: modules/ROOT/pages/module-02-access-create-project.adoc

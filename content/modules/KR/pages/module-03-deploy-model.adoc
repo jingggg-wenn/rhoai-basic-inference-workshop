@@ -1,0 +1,7 @@
+:imagesdir: ../../ROOT/assets/images
+
+[#deploy-model-kr]
+= 모델 배포
+
+// TODO: 영어 원본을 한국어로 번역
+// 원본: modules/ROOT/pages/module-03-deploy-model.adoc

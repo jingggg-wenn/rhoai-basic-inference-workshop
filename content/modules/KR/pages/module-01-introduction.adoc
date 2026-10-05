@@ -1,0 +1,7 @@
+:imagesdir: ../../ROOT/assets/images
+
+[#introduction-kr]
+= 소개
+
+// TODO: 영어 원본을 한국어로 번역
+// 원본: modules/ROOT/pages/module-01-introduction.adoc
