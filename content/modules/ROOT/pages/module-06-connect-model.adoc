@@ -26,30 +26,27 @@ Copy this URL -- you will paste it in the next step.
 
 == Step 6.2: Add the Connection in Open WebUI
 
-. In Open WebUI, click your *profile icon* (bottom-left corner).
-. Click *Admin Panel*.
-
+[start=1]
+. In Open WebUI, click your *profile icon* (bottom-left corner) and click *Admin Panel*.
++
 image::openwebui/img-openwebui-admin-panel.png[Open WebUI profile menu with Admin Panel highlighted]
 
 . Click *Settings*, then click *Connections* in the left sidebar.
-
++
 image::openwebui/img-openwebui-settings.png[Admin Settings showing Connections page]
 
 . Click *Add Connection* (top-right corner).
-
++
 image::openwebui/img-openwebui-addconnection.png[Add Connection button in Connections page]
 
-. In the *URL* field, paste the model endpoint URL from Step 6.1. Make sure it ends with `/v1`.
-. In the *API Key* field, paste the `sk-oai-` API key you created in Module 5 (Step 5.3).
-
+. In the *URL* field, paste the model endpoint URL from Step 6.1. Make sure it ends with `/v1`. In the *API Key* field, paste the `sk-oai-` API key you created in Module 5 (Step 5.3).
++
 image::openwebui/img-openwebui-modelendpoint.png[Add Connection dialog with model endpoint URL and API key]
-
++
 IMPORTANT: The URL must end with `/v1` (e.g., `https://maas.apps.<cluster>/user-XX/<model-name>/v1`). The API key is required for authentication through the MaaS gateway.
 
-[start=7]
-. Click *Save*.
-. The connection should show a *green toggle* -- this means Open WebUI successfully connected and discovered your model.
-
+. Click *Save*. The connection should show a *green toggle* -- this means Open WebUI successfully connected and discovered your model.
++
 [TIP]
 ====
 If the toggle is red, double-check the URL and API key. Ensure the MaaS subscription from Module 5 is in *Ready* status.
@@ -57,12 +54,13 @@ If the toggle is red, double-check the URL and API key. Ensure the MaaS subscrip
 
 == Step 6.3: Verify the Model Connection
 
+[start=1]
 . Go back to the main chat page. Select your model from the dropdown at the top (e.g., `redhataigemma-4-e4b-it`).
-
++
 image::openwebui/img-openwebui-connectedmodel.png[Open WebUI with connected model selected]
 
 . Type a message (e.g., `hello`) and send it. If the model responds, the full inference pipeline is working.
-
++
 image::openwebui/img-openwebui-testchat.png[Open WebUI chat showing model response]
 
 The pipeline is now complete:

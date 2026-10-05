@@ -39,12 +39,12 @@ https://maas.apps.<cluster-domain>/<namespace>/<model-name>/v1
 
 A subscription defines which groups can access which models and sets token rate limits.
 
+[start=1]
 . In the {productname-short} dashboard, navigate to *Settings* > *MaaS governance*.
-
++
 image::maas-setup/img-maas-governance.png[MaaS governance page showing Subscriptions tab]
 
-. Click *Create subscription*.
-. Fill in the subscription form with the following values:
+. Click *Create subscription* and fill in the form with the following values:
 +
 [cols="1,2",options="header"]
 |===
@@ -68,45 +68,42 @@ image::maas-setup/img-maas-governance.png[MaaS governance page showing Subscript
 | *Create authorization policy*
 | Leave checked (auto-creates the matching auth policy)
 |===
-
++
 image::maas-setup/img-maas-subs-1.png[Create subscription form with name, priority, and group]
 
 . Click *Add models* to open the model selection dialog. Select your deployed model and click *Add models*.
-
++
 image::maas-setup/img-maas-subs-2.png[Add models dialog showing deployed model]
 
 . After adding the model, click *Add token limit* next to the model entry.
-
++
 image::maas-setup/img-maas-subs-3.png[Model added with Add token limit prompt]
 
 . Set the token limit (e.g., `10000` tokens per `1` minute) and click *Save*.
-
++
 image::maas-setup/img-maas-subs-4.png[Edit subscription token limits dialog]
 
 . Leave *Create authorization policy* checked, then click *Create subscription*.
-
++
 image::maas-setup/img-maas-subs-5.png[Completed subscription form ready to submit]
 
-You should see the successful creation of the subscription and authorization policy shortly.
-
+. You should see the successful creation of the subscription and authorization policy.
++
 image::maas-setup/img-maas-subs-6.png[Subscription created with Ready status]
 
-Click the *Authorization policies* tab to verify the policy was also created.
-
+. Click the *Authorization policies* tab to verify the policy was also created.
++
 image::maas-setup/img-maas-subs-7.png[Authorization policy created for the subscription]
 
 
 == Step 5.3: Generate an API Key
 
+[start=1]
 . Navigate to *Gen AI Studio* > *API keys*.
-
++
 image::maas-setup/img-apikey-1.png[Gen AI Studio API keys page]
 
-. Click *Create API key*.
-. Fill in the form:
-
-image::maas-setup/img-apikey-2.png[Create API key dialog with name, subscription, and expiration]
-
+. Click *Create API key* and fill in the form:
 +
 [cols="1,2",options="header"]
 |===
@@ -121,10 +118,13 @@ image::maas-setup/img-apikey-2.png[Create API key dialog with name, subscription
 | *Expiration*
 | `30 days` (or choose a value that suits your workshop duration)
 |===
++
+image::maas-setup/img-apikey-2.png[Create API key dialog with name, subscription, and expiration]
 
 . Click *Create API key*.
-. Copy the generated API key immediately using the copy icon. It starts with `sk-oai-` and is shown only once.
 
+. Copy the generated API key immediately using the copy icon. It starts with `sk-oai-` and is shown only once.
++
 image::maas-setup/img-apikey-3.png[API key created dialog showing the generated key]
 
 IMPORTANT: Save this API key securely. You cannot retrieve it again after closing this dialog.
