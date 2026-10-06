@@ -35,38 +35,57 @@ The external URL follows the pattern:
 https://maas.apps.<cluster-domain>/<namespace>/<model-name>/v1
 ----
 
-== Step 5.2: Create a MaaS Subscription (Admin)
+== Step 5.2: Create MaaS Subscriptions (Admin)
 
-A subscription defines which groups can access which models and sets token rate limits.
+A subscription defines which groups can access which models and sets token rate limits. You will create two subscriptions with different rate limits to simulate tiered access:
+
+[cols="1,1,1,1",options="header"]
+|===
+| Subscription | Priority | Token Rate Limit | Use Case
+
+| `workshop-gemma4-premium`
+| `20`
+| `10000` tokens / `1` minute
+| High-throughput users (e.g., production workloads)
+
+| `workshop-gemma4-basic`
+| `10`
+| `5000` tokens / `1` minute
+| Standard users (e.g., workshop participants)
+|===
+
+Higher priority means the subscription is preferred when a user belongs to multiple groups.
+
+=== Create the Premium subscription
 
 [start=1]
 . In the {productname-short} dashboard, navigate to *Settings* > *MaaS governance*.
 +
 image::maas-setup/img-maas-governance.png[MaaS governance page showing Subscriptions tab]
 
-. Click *Create subscription* and fill in the form with the following values:
+. Click *Create subscription* and fill in the form:
 +
 [cols="1,2",options="header"]
 |===
 | Field | Value
 
 | *Name*
-| `workshop-gemma4` (or a name matching your model)
+| `workshop-gemma4-premium`
 
 | *Priority*
-| `20` (higher numbers indicate higher priority)
+| `20`
 
 | *Groups*
-| Select `rhods-admins` (or the group provided by your instructor)
+| Select `rhods-admins` (or the admin group provided by your instructor)
 
 | *Models*
 | Click *Add models* and select your deployed model
 
 | *Token rate limits*
-| `10000` tokens per `1` minute (set after adding the model)
+| `50000` tokens per `1` minute
 
 | *Create authorization policy*
-| Leave checked (auto-creates the matching auth policy)
+| Leave checked
 |===
 +
 image::maas-setup/img-maas-subs-1.png[Create subscription form with name, priority, and group]
@@ -79,7 +98,7 @@ image::maas-setup/img-maas-subs-2.png[Add models dialog showing deployed model]
 +
 image::maas-setup/img-maas-subs-3.png[Model added with Add token limit prompt]
 
-. Set the token limit (e.g., `10000` tokens per `1` minute) and click *Save*.
+. Set the token limit to `10000` tokens per `1` minute and click *Save*.
 +
 image::maas-setup/img-maas-subs-4.png[Edit subscription token limits dialog]
 
@@ -87,16 +106,49 @@ image::maas-setup/img-maas-subs-4.png[Edit subscription token limits dialog]
 +
 image::maas-setup/img-maas-subs-5.png[Completed subscription form ready to submit]
 
-. You should see the successful creation of the subscription and authorization policy.
-+
-image::maas-setup/img-maas-subs-6.png[Subscription created with Ready status]
+=== Create the Basic subscription
 
-. Click the *Authorization policies* tab to verify the policy was also created.
-+
-image::maas-setup/img-maas-subs-7.png[Authorization policy created for the subscription]
+Repeat the same steps above to create a second subscription with these values:
+
+[cols="1,2",options="header"]
+|===
+| Field | Value
+
+| *Name*
+| `workshop-gemma4-basic`
+
+| *Priority*
+| `10`
+
+| *Groups*
+| Select `rhods-admins` (or the same group)
+
+| *Models*
+| Select the same deployed model
+
+| *Token rate limits*
+| `100` tokens per `1` minute
+
+| *Create authorization policy*
+| Leave checked
+|===
+
+image::maas-setup/img-maas-subs-basic.png[Basic subscription form with name, priority, group, model, and token limit]
+
+After creating both subscriptions, the *Subscriptions* tab should show two entries (`workshop-gemma4-premium` and `workshop-gemma4-basic`) both in *Ready* status.
+
+image::maas-setup/img-maas-subs-6.png[Subscriptions tab showing both premium and basic in Ready status]
+
+Click the *Authorization policies* tab to verify the policies were also created for both subscriptions.
+
+image::maas-setup/img-maas-subs-7.png[Authorization policies created for both subscriptions]
 
 
-== Step 5.3: Generate an API Key
+== Step 5.3: Generate API Keys
+
+You will create two API keys, one for each subscription, so you can test the different rate limits from Open WebUI.
+
+=== Create a Premium API key
 
 [start=1]
 . Navigate to *Gen AI Studio* > *API keys*.
@@ -110,13 +162,13 @@ image::maas-setup/img-apikey-1.png[Gen AI Studio API keys page]
 | Field | Value
 
 | *Name*
-| A descriptive name (e.g., `workshop-apikey`)
+| `apikey-premium`
 
 | *Subscription*
-| Select `workshop-gemma4` (the subscription from Step 5.2)
+| Select `workshop-gemma4-premium`
 
 | *Expiration*
-| `30 days` (or choose a value that suits your workshop duration)
+| `30 days`
 |===
 +
 image::maas-setup/img-apikey-2.png[Create API key dialog with name, subscription, and expiration]
@@ -128,3 +180,25 @@ image::maas-setup/img-apikey-2.png[Create API key dialog with name, subscription
 image::maas-setup/img-apikey-3.png[API key created dialog showing the generated key]
 
 IMPORTANT: Save this API key securely. You cannot retrieve it again after closing this dialog.
+
+=== Create a Basic API key
+
+Repeat the same steps to create a second API key:
+
+[cols="1,2",options="header"]
+|===
+| Field | Value
+
+| *Name*
+| `apikey-basic`
+
+| *Subscription*
+| Select `workshop-gemma4-basic`
+
+| *Expiration*
+| `30 days`
+|===
+
+image::maas-setup/img-apikey-4.png[Create API key dialog for basic subscription]
+
+Copy and save this key as well. You now have two API keys with different rate limits that you can use in Module 6 to connect to Open WebUI.
