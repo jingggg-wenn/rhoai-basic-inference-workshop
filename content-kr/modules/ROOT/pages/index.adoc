@@ -1,9 +1,0 @@
-:imagesdir: ../assets/images
-
-= Red Hat AI 기본 추론 워크숍
-
-워크숍에 오신 것을 환영합니다. 아래를 클릭하여 시작하세요.
-
-xref:module-01-introduction.adoc#introduction-kr[시작하기 -- 1: 소개]
-
-xref:modules::index.adoc[Switch to English]

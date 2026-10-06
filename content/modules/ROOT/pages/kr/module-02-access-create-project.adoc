@@ -1,0 +1,5 @@
+[#access-project-kr]
+= OpenShift AI 접속 및 프로젝트 생성
+
+// TODO: Translate from English source
+// Source: module-02-access-create-project.adoc

@@ -8,8 +8,6 @@ content:
   sources:
     - url: .
       start_path: content
-    - url: .
-      start_path: content-kr
 
 ui:
   bundle:

@@ -1,0 +1,5 @@
+[#connect-model-kr]
+= Open WebUI에 모델 연결
+
+// TODO: Translate from English source
+// Source: module-06-connect-model.adoc

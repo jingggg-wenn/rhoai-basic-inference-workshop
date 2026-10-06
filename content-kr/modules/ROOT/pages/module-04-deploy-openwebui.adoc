@@ -1,7 +1,0 @@
-:imagesdir: ../assets/images
-
-[#deploy-openwebui-kr]
-= Open WebUI 배포
-
-// TODO: 영어 원본을 한국어로 번역
-// 원본: modules/ROOT/pages/module-04-deploy-openwebui.adoc

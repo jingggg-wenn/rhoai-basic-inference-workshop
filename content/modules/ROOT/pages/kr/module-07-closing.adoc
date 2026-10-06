@@ -1,0 +1,5 @@
+[#closing-kr]
+= 마무리 및 참고 자료
+
+// TODO: Translate from English source
+// Source: module-07-closing.adoc
