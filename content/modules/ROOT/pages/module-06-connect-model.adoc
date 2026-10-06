@@ -39,31 +39,54 @@ image::openwebui/img-openwebui-settings.png[Admin Settings showing Connections p
 +
 image::openwebui/img-openwebui-addconnection.png[Add Connection button in Connections page]
 
-. In the *URL* field, paste the model endpoint URL from Step 6.1. Make sure it ends with `/v1`. In the *API Key* field, paste the `sk-oai-` API key you created in Module 5 (Step 5.3).
+. In the *URL* field, paste the model endpoint URL from Step 6.1. Make sure it ends with `/v1`. In the *API Key* field, paste the *premium* API key (`apikey-premium`) from Module 5. Set the *Prefix ID* to `PREMIUM` so you can distinguish this connection in the model dropdown.
 +
-image::openwebui/img-openwebui-modelendpoint.png[Add Connection dialog with model endpoint URL and API key]
+image::openwebui/img-openwebui-modelendpoint-premium.png[Premium connection with URL, API key, and PREMIUM prefix]
 +
 IMPORTANT: The URL must end with `/v1` (e.g., `https://maas.apps.<cluster>/user-XX/<model-name>/v1`). The API key is required for authentication through the MaaS gateway.
 
 . Click *Save*. The connection should show a *green toggle* -- this means Open WebUI successfully connected and discovered your model.
+
+. Repeat the process: click *Add Connection* again. Use the same URL but paste the *basic* API key (`apikey-basic`) this time. Set the *Prefix ID* to `BASIC`.
++
+image::openwebui/img-openwebui-modelendpoint-basic.png[Basic connection with URL, API key, and BASIC prefix]
+
+. Click *Save*. You should now see two connections, both with green toggles.
 +
 [TIP]
 ====
-If the toggle is red, double-check the URL and API key. Ensure the MaaS subscription from Module 5 is in *Ready* status.
+If a toggle is red, double-check the URL and API key. Ensure the MaaS subscriptions from Module 5 are in *Ready* status.
 ====
+
+You now have two connections with different rate limits. In the chat dropdown, models will appear prefixed with `PREMIUM` or `BASIC`, allowing you to test the difference in token rate limits.
 
 == Step 6.3: Verify the Model Connection
 
+Go back to the main chat page. Click the model dropdown at the top -- you should see both `PREMIUM` and `BASIC` prefixed models.
+
+image::openwebui/img-openwebui-connectedmodels.png[Model dropdown showing PREMIUM and BASIC connections]
+
+=== Test with Premium
+
 [start=1]
-. Go back to the main chat page. Select your model from the dropdown at the top (e.g., `redhataigemma-4-e4b-it`).
+. Select `PREMIUM.redhataigemma-4-e4b-it` from the dropdown.
+. Send a longer prompt (e.g., `give me a funny joke. make it long and at least 500 words in length`).
+. The model should respond with a full, uninterrupted response -- the premium subscription has a `10,000` token/min rate limit.
 +
-image::openwebui/img-openwebui-connectedmodel.png[Open WebUI with connected model selected]
+image::openwebui/img-openwebui-testchat-premium.png[Premium connection generating a long response without rate limiting]
 
-. Type a message (e.g., `hello`) and send it. If the model responds, the full inference pipeline is working.
+=== Test with Basic
+
+[start=1]
+. Select `BASIC.redhataigemma-4-e4b-it` from the dropdown.
+. Send a similar long prompt.
+. Notice the response may be shorter or cut off -- the basic subscription has a `100` token/min rate limit, which throttles the output.
 +
-image::openwebui/img-openwebui-testchat.png[Open WebUI chat showing model response]
+image::openwebui/img-openwebui-testchat-basic.png[Basic connection with rate-limited response]
 
-The pipeline is now complete:
+This demonstrates how MaaS subscriptions enforce different token rate limits per API key, allowing you to tier access for different user groups.
+
+The inference pipeline:
 
 [source,text]
 ----
