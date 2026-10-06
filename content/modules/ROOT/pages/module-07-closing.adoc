@@ -21,10 +21,10 @@ You have completed the hands-on portion of the Basic Inferencing workshop.
 | Deployed Open WebUI as a self-hosted chat interface in your project
 
 | 5 - MaaS and API Key
-| Created a MaaS subscription and generated an API key for authenticated model access
+| Created MaaS subscriptions and generated API keys for authenticated access to deployed models
 
 | 6 - Connect Model
-| Connected the MaaS model endpoint to Open WebUI and verified inference end-to-end
+| Connected model endpoints to Open WebUI using the MaaS API keys and tested chat-based inference
 |===
 
 == Additional Resources
