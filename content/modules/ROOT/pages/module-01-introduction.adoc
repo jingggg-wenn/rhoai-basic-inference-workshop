@@ -3,7 +3,7 @@
 [#introduction]
 = Introduction
 
-This workshop is a hands-on guide for deploying and testing AI model inference on OpenShift AI 3.5. You will deploy a model from the model catalog, set up a chat interface, and test both direct chat and document-based retrieval-augmented generation (RAG).
+This workshop is a hands-on guide for deploying and testing AI model inference on OpenShift AI 3.5. You will deploy a model from the model catalog, configure Model-as-a-Service (MaaS) with tiered access, set up a chat interface, and test end-to-end inference.
 
 [TIP]
 ====
@@ -15,10 +15,11 @@ For a scripted environment setup (MaaS gateway, operators, dashboard features, D
 By the end of this workshop, you will be able to:
 
 * Create a Data Science project in {productname-short}
-* Deploy an AI model with tool calling enabled using the vLLM serving runtime
-* Deploy Open WebUI as a self-hosted chat interface with RAG support
-* Connect Open WebUI to your vLLM model endpoint
-* Test LLM chat and document-based RAG
+* Deploy an AI model from the model catalog using the llm-d serving runtime
+* Configure MaaS subscriptions with different token rate limits (premium and basic tiers)
+* Generate API keys for authenticated model access
+* Deploy Open WebUI as a self-hosted chat interface
+* Connect Open WebUI to your model via the MaaS gateway and test chat-based inference
 
 == Workshop Structure
 
