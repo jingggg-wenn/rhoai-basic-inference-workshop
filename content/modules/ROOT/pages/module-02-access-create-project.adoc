@@ -9,8 +9,10 @@ In this module, you will log in to the {productname-long} dashboard and create a
 
 . Open your web browser (Chrome or Firefox recommended).
 . Navigate to the *{productname-short} Dashboard URL* provided by your instructor.
-. You will be redirected to a login page. Select the login provider specified by your instructor (for example, `workshop-users` or `htpasswd`).
-. Enter your username and password.
+. You will be redirected to a login page. Select *htpasswd* as the login provider.
++
+image::ocp-rhoai-portal/img-htpasswd-login.png[Login page showing htpasswd provider,600]
+. Enter your assigned username (e.g. `user01`) and password.
 . Click *Log in*.
 
 You should now see the *OpenShift AI Dashboard* with a left sidebar showing menu items such as Projects, AI hub, Gen AI studio, and more.
