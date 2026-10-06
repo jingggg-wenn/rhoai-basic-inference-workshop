@@ -27,6 +27,10 @@ You have completed the hands-on portion of the Basic Inferencing workshop.
 | Connected model endpoints to Open WebUI using the MaaS API keys and tested chat-based inference
 |===
 
+== Continue to Part 2
+
+If you are continuing with Part 2 of the Model-as-a-Service workshop, proceed to the https://jingggg-wenn.github.io/maas-gametime/modules/main/index.html[MaaS AI-Assisted Coding Development Game]. This hands-on session builds on the MaaS infrastructure configured in this workshop.
+
 == Additional Resources
 
 * https://docs.redhat.com/en/documentation/red_hat_openshift_ai_self-managed/{rhoai-version}[{productname-long} {rhoai-version} Documentation]

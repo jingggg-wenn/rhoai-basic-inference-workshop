@@ -5,6 +5,8 @@
 
 This workshop is a hands-on guide for deploying and testing AI model inference on OpenShift AI 3.5. You will deploy a model from the model catalog, configure Model-as-a-Service (MaaS) with tiered access, set up a chat interface, and test end-to-end inference.
 
+xref:kr/module-01-introduction.adoc#introduction-kr[한국어 버전은 여기를 클릭하세요 (Click here for the Korean version)]
+
 [TIP]
 ====
 For a scripted environment setup (MaaS gateway, operators, dashboard features, DevSpaces, and more), see the https://github.com/jingggg-wenn/rhoai-sno-setup-guide[RHOAI 3.5 SNO Setup Guide]. It automates the full cluster preparation in two scripts.
