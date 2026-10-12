@@ -82,7 +82,7 @@ image::model-deployment/img-model-deployment-form-3-2.png[토폴로지, Hardware
 | 설정 | 수행 내용
 
 | *Add as AI asset endpoint*
-| 이 확인란을 선택합니다 (Playground에서 테스트 가능)
+| 선택하지 않습니다
 
 | *Publish as MaaS*
 | 이 확인란을 선택합니다 (게이트웨이 API를 통해 모델에 접근 가능)
@@ -107,7 +107,7 @@ image::model-deployment/img-model-deployment-form-4.png[AI asset endpoint 및 Ma
 * *Deployment method:* LLM inference service with llm-d
 * *Topology:* Single node
 * *Replicas:* 1
-* *AI asset endpoint:* Yes
+* *AI asset endpoint:* No
 * *MaaS endpoint:* Yes
 * *Gateway:* maas-default-gateway | openshift-ingress
 

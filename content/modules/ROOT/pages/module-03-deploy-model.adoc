@@ -82,7 +82,7 @@ This step configures model availability and access.
 | Setting | What to Do
 
 | *Add as AI asset endpoint*
-| Check this box (allows testing in the Playground)
+| Leave unchecked
 
 | *Publish as MaaS*
 | Check this box (makes the model accessible through the gateway API)
@@ -107,7 +107,7 @@ Review the configuration summary. Verify the key settings:
 * *Deployment method:* LLM inference service with llm-d
 * *Topology:* Single node
 * *Replicas:* 1
-* *AI asset endpoint:* Yes
+* *AI asset endpoint:* No
 * *MaaS endpoint:* Yes
 * *Gateway:* maas-default-gateway | openshift-ingress
 
