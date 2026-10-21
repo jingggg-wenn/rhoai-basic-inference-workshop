@@ -13,8 +13,10 @@ You can retrieve the model endpoint URL from either the CLI or the dashboard UI.
 
 [source,sh,role="execute"]
 ----
-echo "https://$(oc get route $(oc get route -n $NAMESPACE -o jsonpath='{.items[0].metadata.name}') -n $NAMESPACE -o jsonpath='{.spec.host}')/v1"
+echo "$(oc get llminferenceservice -n $NAMESPACE -o jsonpath='{.items[0].status.url}')/v1"
 ----
+
+Since the model was deployed as an `LLMInferenceService` (llm-d) with MaaS, the endpoint URL is available in the CR's `status.url` field. Append `/v1` to form the OpenAI-compatible API base URL.
 
 *Option B: Dashboard UI*
 
