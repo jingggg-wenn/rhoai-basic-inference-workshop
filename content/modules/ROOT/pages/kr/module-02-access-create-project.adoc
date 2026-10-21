@@ -35,9 +35,9 @@ image::ocp-rhoai-portal/img-access-ocp.png[OpenShift AI와 OpenShift Console 간
 
 프로젝트(Kubernetes 네임스페이스)는 모델 배포, Workbench 생성, 실험 수행을 위한 작업 공간입니다.
 
-. 좌측 사이드바에서 *Projects*를 클릭합니다.
-
-. 우측 상단의 *Create project* 버튼을 클릭합니다.
+. 좌측 사이드바에서 *Projects*를 클릭한 후 우측 상단의 *Create project* 버튼을 클릭합니다.
++
+image::ocp-rhoai-portal/img-create-proj.png[Create project 버튼이 강조 표시된 Projects 페이지]
 
 . 양식을 작성합니다:
 +
@@ -51,6 +51,8 @@ image::ocp-rhoai-portal/img-access-ocp.png[OpenShift AI와 OpenShift Console 간
 | *Description*
 | `My workshop project` (선택 사항)
 |===
++
+image::ocp-rhoai-portal/img-create-project-1.png[Name 필드와 Create 버튼이 강조 표시된 프로젝트 생성 대화 상자]
 
 . *Create*를 클릭합니다.
 

@@ -38,12 +38,9 @@ image::ocp-rhoai-portal/img-access-ocp.png[Switching between OpenShift AI and Op
 
 A project (also known as a Kubernetes namespace) is your workspace where you will deploy models, create workbenches, and run experiments.
 
-. Click *Projects* in the left sidebar.
+. Click *Projects* in the left sidebar, then click the *Create project* button (top right).
 +
-// TODO: Add screenshot of projects page
-// image::projects-page.png[Projects page]
-
-. Click the *Create project* button (top right).
+image::ocp-rhoai-portal/img-create-proj.png[Projects page with Create project button highlighted]
 
 . Fill in the form:
 +
@@ -57,13 +54,9 @@ A project (also known as a Kubernetes namespace) is your workspace where you wil
 | *Description*
 | `My workshop project` (optional)
 |===
++
+image::ocp-rhoai-portal/img-create-project-1.png[Create project dialog with Name field and Create button highlighted]
 
 . Click *Create*.
 
-// TODO: Add screenshot of create project dialog
-// image::create-project.png[Create project dialog]
-
 You should now see your project `user-XX` with tabs for Overview, Workbenches, Pipelines, Deployments, Connections, and more.
-
-// TODO: Add screenshot of project overview
-// image::project-overview.png[Project overview]
