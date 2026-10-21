@@ -11,15 +11,15 @@ To browse the catalog, navigate to *AI hub* > *Models* in the left sidebar, then
 
 image::model-deployment/img-model-catalog.png[Model Catalog in OpenShift AI]
 
-Click on a model to open its model card. The card shows the model description, capabilities, benchmark data, and -- on the right side under *Model details* -- the *Model location* field containing the OCI registry address. This is the URI you will use during deployment.
-
-image::model-deployment/img-gemma4-model-card.png[Gemma 4 model card showing model location from Red Hat registry]
-
 == Step 3.1: Search for the Model
 
 In the model catalog, search for `gemma-4-E4B` in the search bar. Select the *gemma-4-E4B-it* model card. We will be deploying this model for this exercise.
 
 image::model-deployment/img-gemma4-model.png[Searching for gemma-4-E4B in the model catalog]
+
+Click on the model to open its model card. The card shows the model description, capabilities, benchmark data, and -- on the right side under *Model details* -- the *Model location* field containing the OCI registry address. Since the image is pulled directly from the Red Hat registry, you can be confident of the provenance and integrity of the model source. This is the URI used during deployment.
+
+image::model-deployment/img-gemma4-model-card.png[Gemma 4 model card showing model location from Red Hat registry]
 
 == Step 3.2: Deploy the Model
 
