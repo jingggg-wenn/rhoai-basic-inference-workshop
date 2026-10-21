@@ -93,6 +93,11 @@ This step configures model availability and access.
 
 Leave *Token authentication*, *Add custom runtime arguments*, and *Add custom runtime environment variables* unchecked for this exercise.
 
+[TIP]
+====
+If the {productname-short} console was already open when MaaS was configured on the cluster, the *Publish as MaaS* option may not appear. Refresh the browser page to resolve this.
+====
+
 image::model-deployment/img-model-deployment-form-4.png[Advanced settings with AI asset endpoint and MaaS enabled]
 
 Click *Next* to proceed.
