@@ -20,7 +20,7 @@ When you deploy a model with `LLMInferenceService` (llm-d), the model is exposed
 * *Usage tracking* -- Centralized visibility into token consumption
 * *Multi-tenant access* -- Multiple teams can share the same model with separate quotas
 
-== Step 5.1: Verify Your Model is Ready
+== Step 4.1: Verify Your Model is Ready
 
 Before setting up MaaS, confirm your model from Module 3 is running:
 
@@ -35,7 +35,7 @@ The external URL follows the pattern:
 https://maas.apps.<cluster-domain>/<namespace>/<model-name>/v1
 ----
 
-== Step 5.2: Create MaaS Subscriptions (Admin)
+== Step 4.2: Create MaaS Subscriptions (Admin)
 
 A subscription defines which groups can access which models and sets token rate limits. You will create two subscriptions with different rate limits to simulate tiered access:
 
@@ -144,7 +144,7 @@ Click the *Authorization policies* tab to verify the policies were also created 
 image::maas-setup/img-maas-subs-7.png[Authorization policies created for both subscriptions]
 
 
-== Step 5.3: Generate API Keys
+== Step 4.3: Generate API Keys
 
 You will create two API keys, one for each subscription, so you can test the different rate limits from Open WebUI.
 
@@ -201,4 +201,4 @@ Repeat the same steps to create a second API key:
 
 image::maas-setup/img-apikey-4.png[Create API key dialog for basic subscription]
 
-Copy and save this key as well. You now have two API keys with different rate limits that you can use in Module 6 to connect to Open WebUI.
+Copy and save this key as well. You now have two API keys with different rate limits that you can use in Module 7 to connect to Open WebUI.

@@ -1,0 +1,66 @@
+:imagesdir: ../assets/images
+
+[#test-playground]
+= Test with AI Playground
+
+// TODO: Add intro paragraph
+
+== Step 5.1: Launch the Playground
+
+Navigate to *Gen AI Studio* > *AI asset endpoints* in the left sidebar. Your deployed model should appear with a *Ready* status. Click *Try in playground* to launch the Playground environment.
+
+image::ai-playground/img-try-in-playground.png[AI asset endpoints page showing the model in Ready status with Try in playground button]
+
+NOTE: The Playground environment may take a few minutes to provision when accessed for the first time. Wait for it to finish loading before sending any prompts.
+
+Once the Playground loads, the settings panel on the right shows the *Model*, *Subscription*, *Temperature*, and *Streaming* controls.
+
+image::ai-playground/img-playground-launched.png[Playground interface showing model, subscription selector, temperature, and streaming settings]
+
+== Step 5.2: Compare Chat with Different Subscription Tiers
+
+Click *Compare chat* in the top toolbar to open a side-by-side comparison view. This allows you to send the same prompt to two chat sessions simultaneously, each using a different MaaS subscription tier.
+
+=== Configure Chat 1 -- Premium
+
+. Click the *Chat 1* tab in the top-right settings panel.
+. Under *Subscription*, select `workshop-gemma4-premium` from the dropdown.
+. Leave the model, temperature, and streaming settings as defaults.
+
+image::ai-playground/img-chat1-premium.png[Chat 1 configured with workshop-gemma4-premium subscription]
+
+=== Configure Chat 2 -- Basic
+
+. Click the *Chat 2* tab in the settings panel.
+. Under *Subscription*, select `workshop-gemma4-basic` from the dropdown.
+. Leave all other settings the same as Chat 1.
+
+image::ai-playground/img-chat2-basic.png[Chat 2 configured with workshop-gemma4-basic subscription]
+
+=== Send a Prompt and Compare
+
+Type a prompt in the shared message input at the bottom (e.g., `Explain how binary search works and write a Python implementation with comments.`) and press Enter. The prompt is sent to both chats at the same time.
+
+Notice that the first few prompts return identical responses on both sides -- the same model is serving both chats. However, as you continue sending prompts, *Chat 2 (Basic)* eventually hits its token rate limit and returns a *Server error*, while *Chat 1 (Premium)* continues responding without interruption.
+
+image::ai-playground/img-compare-chats-ratelimited.png[Compare chat showing Chat 1 Premium responding normally while Chat 2 Basic is rate-limited with a Server error]
+
+This is the MaaS subscription tier system in action:
+
+* *Chat 1 (Premium)* -- `workshop-gemma4-premium` has a `10,000` token/min rate limit, so it handles sustained conversation without throttling.
+* *Chat 2 (Basic)* -- `workshop-gemma4-basic` has a `100` token/min rate limit, so it gets rate-limited after a few exchanges and returns an error.
+
+Both chats use the same model and the same infrastructure. The only difference is the subscription tier assigned to each chat session. This is how MaaS enables administrators to provide differentiated levels of service -- premium users get higher throughput while standard users are subject to stricter quotas, all managed centrally through subscriptions without any changes to the model deployment itself.
+
+== Explore Further: Playground Settings
+
+Beyond the Model and Subscription tabs, the Playground settings panel offers additional capabilities worth exploring:
+
+image::ai-playground/img-playground-explore-settings.png[Playground settings panel showing Model, Prompt, Knowledge, MCP, and Guardrails tabs]
+
+* *Prompt* -- Define a system prompt to steer the model's behavior (e.g., "You are a helpful coding assistant" or "Respond only in Korean").
+* *Knowledge* -- Upload documents (PDF, text) to enable retrieval-augmented generation (RAG). The Playground will use the uploaded content as context when answering questions.
+* *MCP* -- Connect to MCP (Model Context Protocol) servers to extend the model with external tools and data sources.
+* *Guardrails* -- Enable content safety filters to detect and block harmful inputs or outputs (e.g., PII detection, prompt injection, toxicity).
+
+These features are outside the scope of this workshop but are available for self-guided exploration.

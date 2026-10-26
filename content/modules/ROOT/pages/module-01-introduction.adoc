@@ -20,6 +20,7 @@ By the end of this workshop, you will be able to:
 * Deploy an AI model from the model catalog using the llm-d serving runtime
 * Configure MaaS subscriptions with different token rate limits (premium and basic tiers)
 * Generate API keys for authenticated model access
+* Test model inference and compare subscription tiers in the AI Playground
 * Deploy Open WebUI as a self-hosted chat interface
 * Connect Open WebUI to your model via the MaaS gateway and test chat-based inference
 
@@ -42,18 +43,22 @@ By the end of this workshop, you will be able to:
 | Hands-on
 
 | 4
-| Deploy Open WebUI
-| Hands-on
-
-| 5
 | Set Up MaaS and API Key
 | Hands-on
 
+| 5
+| Test with AI Playground
+| Hands-on
+
 | 6
-| Connect MaaS Model to Open WebUI
+| Deploy Open WebUI
 | Hands-on
 
 | 7
+| Connect MaaS Model to Open WebUI
+| Hands-on
+
+| 8
 | Closing and Resources
 | Summary
 |===

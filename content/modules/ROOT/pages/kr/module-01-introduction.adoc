@@ -48,10 +48,14 @@
 | 실습
 
 | 6
-| MaaS 모델을 Open WebUI에 연결
+| AI Playground에서 테스트
 | 실습
 
 | 7
+| MaaS 모델을 Open WebUI에 연결
+| 실습
+
+| 8
 | 마무리 및 참고 자료
 | 요약
 |===

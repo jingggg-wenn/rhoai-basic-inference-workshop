@@ -3,9 +3,9 @@
 [#connect-model]
 = Connect Model to Open WebUI
 
-In this module, you will connect your deployed model to Open WebUI using the MaaS endpoint and API key from Module 5.
+In this module, you will connect your deployed model to Open WebUI using the MaaS endpoint and API key from Module 4.
 
-== Step 6.1: Get Your Model URL
+== Step 7.1: Get Your Model URL
 
 You can retrieve the model endpoint URL from either the CLI or the dashboard UI.
 
@@ -26,7 +26,7 @@ image::model-deployment/img-model-deployment-endpoint.png[Inference endpoint pop
 
 Copy this URL -- you will paste it in the next step.
 
-== Step 6.2: Add the Connection in Open WebUI
+== Step 7.2: Add the Connection in Open WebUI
 
 [start=1]
 . In Open WebUI, click your *profile icon* (bottom-left corner) and click *Admin Panel*.
@@ -41,7 +41,7 @@ image::openwebui/img-openwebui-settings.png[Admin Settings showing Connections p
 +
 image::openwebui/img-openwebui-addconnection.png[Add Connection button in Connections page]
 
-. In the *URL* field, paste the model endpoint URL from Step 6.1. Make sure it ends with `/v1`. In the *API Key* field, paste the *premium* API key (`apikey-premium`) from Module 5. Set the *Prefix ID* to `PREMIUM` so you can distinguish this connection in the model dropdown.
+. In the *URL* field, paste the model endpoint URL from Step 7.1. Make sure it ends with `/v1`. In the *API Key* field, paste the *premium* API key (`apikey-premium`) from Module 4. Set the *Prefix ID* to `PREMIUM` so you can distinguish this connection in the model dropdown.
 +
 image::openwebui/img-openwebui-modelendpoint-premium.png[Premium connection with URL, API key, and PREMIUM prefix]
 +
@@ -57,12 +57,12 @@ image::openwebui/img-openwebui-modelendpoint-basic.png[Basic connection with URL
 +
 [TIP]
 ====
-If a toggle is red, double-check the URL and API key. Ensure the MaaS subscriptions from Module 5 are in *Ready* status.
+If a toggle is red, double-check the URL and API key. Ensure the MaaS subscriptions from Module 4 are in *Ready* status.
 ====
 
 You now have two connections with different rate limits. In the chat dropdown, models will appear prefixed with `PREMIUM` or `BASIC`, allowing you to test the difference in token rate limits.
 
-== Step 6.3: Verify the Model Connection
+== Step 7.3: Verify the Model Connection
 
 Go back to the main chat page. Click the model dropdown at the top -- you should see both `PREMIUM` and `BASIC` prefixed models.
 

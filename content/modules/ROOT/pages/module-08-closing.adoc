@@ -17,13 +17,16 @@ You have completed the hands-on portion of the Basic Inferencing workshop.
 | 3 - Deploy a Model
 | Deployed an LLM from the model catalog using the llm-d serving runtime on a GPU node
 
-| 4 - Deploy Open WebUI
-| Deployed Open WebUI as a self-hosted chat interface in your project
-
-| 5 - MaaS and API Key
+| 4 - MaaS and API Key
 | Created MaaS subscriptions and generated API keys for authenticated access to deployed models
 
-| 6 - Connect Model
+| 5 - Test with AI Playground
+| Tested the model in the AI Playground and compared subscription tiers side-by-side using Compare chat
+
+| 6 - Deploy Open WebUI
+| Deployed Open WebUI as a self-hosted chat interface in your project
+
+| 7 - Connect Model
 | Connected model endpoints to Open WebUI using the MaaS API keys and tested chat-based inference
 |===
 

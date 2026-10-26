@@ -5,14 +5,14 @@
 
 In this module, you will deploy Open WebUI -- a self-hosted chat interface similar to ChatGPT -- and connect it to your model. You will use the {ocp-short} Web Terminal for all command-line steps.
 
-== Step 4.1: Open the Web Terminal
+== Step 6.1: Open the Web Terminal
 
 . Access the *{ocp-short} Console* by clicking the grid icon (3x3 squares) in the top-right corner of the {productname-short} dashboard, then select *{ocp-short} Console*.
 . Click the *>_* icon in the top-right masthead of the {ocp-short} Console to open the Web Terminal.
 
 This gives you an in-browser terminal with `oc`, `git`, and `sed` pre-installed. No local CLI tools are needed.
 
-== Step 4.2: Clone the Workshop Repository
+== Step 6.2: Clone the Workshop Repository
 
 [source,sh,role="execute"]
 ----
@@ -24,7 +24,7 @@ git clone https://github.com/jingggg-wenn/rhoai-basic-inference-workshop.git
 cd rhoai-basic-inference-workshop
 ----
 
-== Step 4.3: Set Your Environment Variables
+== Step 6.3: Set Your Environment Variables
 
 Set your namespace (for example `user-05` or `admin-02`):
 
@@ -33,7 +33,7 @@ Set your namespace (for example `user-05` or `admin-02`):
 export NAMESPACE=user-XX
 ----
 
-== Step 4.4: Deploy Open WebUI
+== Step 6.4: Deploy Open WebUI
 
 Open WebUI deploys the following resources into your namespace:
 
@@ -50,14 +50,14 @@ Make sure your `NAMESPACE` variable is set and you are in the workshop repo dire
 sed "s/\${NAMESPACE}/$NAMESPACE/g" manifests/open-webui.yaml | oc apply -f -
 ----
 
-== Step 4.5: Wait for Open WebUI
+== Step 6.5: Wait for Open WebUI
 
 [source,sh,role="execute"]
 ----
 oc rollout status deployment/open-webui -n $NAMESPACE --timeout=120s
 ----
 
-== Step 4.6: Get the Open WebUI URL
+== Step 6.6: Get the Open WebUI URL
 
 [source,sh,role="execute"]
 ----
@@ -73,4 +73,4 @@ Copy this URL and open it in your browser.
 image::openwebui/img-openwebui-default.png[Open WebUI default landing page]
 
 
-Once Open WebUI is running, proceed to Module 5 to set up your MaaS API key, then Module 6 to connect your model.
+Once Open WebUI is running, proceed to Module 7 to connect your model using the MaaS API keys you created in Module 4.
