@@ -27,6 +27,8 @@ antora:
   extensions:
     - require: ./content/lib/dev-mode.js
       enabled: true
+    - require: '@antora/lunr-extension'
+      index_latest_only: true
 
 output:
   dir: ./www
