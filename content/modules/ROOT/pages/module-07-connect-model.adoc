@@ -46,6 +46,21 @@ image::openwebui/img-openwebui-addconnection.png[Add Connection button in Connec
 image::openwebui/img-openwebui-modelendpoint-premium.png[Premium connection with URL, API key, and PREMIUM prefix]
 +
 IMPORTANT: The URL must end with `/v1` (e.g., `https://maas.apps.<cluster>/user-XX/<model-name>/v1`). The API key is required for authentication through the MaaS gateway.
++
+[TIP]
+====
+If you lost the value of your permanent API key, you can generate a temporary key directly from the model endpoint dialog. Navigate to *Gen AI Studio* > *AI asset endpoints*, then click *View* next to your model.
+
+image::openwebui/img-asset-endpoints.png[Gen AI Studio AI asset endpoints page with View button highlighted]
+
+In the Endpoints dialog, select a subscription from the dropdown, then click *Generate API key*.
+
+image::openwebui/img-temp-api-key-generate.png[Endpoint dialog with Generate API key button highlighted]
+
+The temporary key expires in 1 hour and will not appear in your API keys list. Copy it using the copy icon.
+
+image::openwebui/img-temp-api-key.png[Temporary API key generated with copy button]
+====
 
 . Click *Save*. The connection should show a *green toggle* -- this means Open WebUI successfully connected and discovered your model.
 

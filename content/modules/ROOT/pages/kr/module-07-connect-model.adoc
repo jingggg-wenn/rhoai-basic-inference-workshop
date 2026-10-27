@@ -46,6 +46,21 @@ image::openwebui/img-openwebui-addconnection.png[Connections 페이지의 Add Co
 image::openwebui/img-openwebui-modelendpoint-premium.png[URL, API 키, PREMIUM 접두사가 설정된 Premium 연결]
 +
 IMPORTANT: URL은 반드시 `/v1`로 끝나야 합니다 (예: `https://maas.apps.<cluster>/user-XX/<model-name>/v1`). MaaS 게이트웨이를 통한 인증에 API 키가 필요합니다.
++
+[TIP]
+====
+영구 API 키의 값을 분실한 경우, 모델 엔드포인트 대화 상자에서 임시 키를 직접 생성할 수 있습니다. *Gen AI Studio* > *AI asset endpoints*로 이동한 후 모델 옆의 *View*를 클릭합니다.
+
+image::openwebui/img-asset-endpoints.png[View 버튼이 강조 표시된 Gen AI Studio AI asset endpoints 페이지]
+
+Endpoints 대화 상자에서 드롭다운을 통해 구독을 선택한 후 *Generate API key*를 클릭합니다.
+
+image::openwebui/img-temp-api-key-generate.png[Generate API key 버튼이 강조 표시된 Endpoints 대화 상자]
+
+임시 키는 1시간 후 만료되며 API keys 목록에 표시되지 않습니다. 복사 아이콘을 사용하여 키를 복사합니다.
+
+image::openwebui/img-temp-api-key.png[복사 버튼이 있는 생성된 임시 API 키]
+====
 
 . *Save*를 클릭합니다. 연결이 *녹색 토글*로 표시되어야 합니다 -- 이는 Open WebUI가 모델에 성공적으로 연결하여 모델을 검색했음을 의미합니다.
 
