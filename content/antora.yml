@@ -33,7 +33,6 @@ asciidoc:
     deliverable: lab
     productname-long: Red Hat OpenShift AI
     productname-short: OpenShift AI
-    page-links: links
     page-rhoai_dashboard_url: "https://data-science-gateway.{openshift_cluster_ingress_domain}/"
     page-openshift_cluster_console_url: "https://console-openshift-console.{openshift_cluster_ingress_domain}"
     # Model details -- update when model is finalized
