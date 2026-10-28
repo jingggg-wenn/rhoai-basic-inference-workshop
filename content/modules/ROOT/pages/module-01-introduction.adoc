@@ -9,7 +9,7 @@ xref:kr/module-01-introduction.adoc#introduction-kr[한국어 버전은 여기�
 
 [TIP]
 ====
-For a scripted environment setup (MaaS gateway, operators, dashboard features, DevSpaces, and more), see the https://github.com/jingggg-wenn/rhoai-sno-setup-guide[RHOAI 3.5 SNO Setup Guide]. It automates the full cluster preparation in two scripts.
+For a scripted environment setup (MaaS gateway, operators, dashboard features, DevSpaces, and more), see the https://github.com/jingggg-wenn/rhoai-sno-setup-guide[RHOAI 3.5 SNO Setup Guide] repo. For the quick workshop setup, follow the https://github.com/jingggg-wenn/rhoai-sno-setup-guide/blob/main/scripts/WORKSHOP-SETUP.md[Workshop Setup Guide] -- it automates the full cluster preparation in two scripts.
 ====
 
 == What You Will Learn

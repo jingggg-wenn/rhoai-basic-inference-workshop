@@ -7,7 +7,7 @@
 
 [TIP]
 ====
-스크립트를 통한 환경 설정(MaaS 게이트웨이, Operator, 대시보드 기능, DevSpaces 등)은 https://github.com/jingggg-wenn/rhoai-sno-setup-guide[RHOAI 3.5 SNO Setup Guide]를 참조하십시오. 두 개의 스크립트로 전체 클러스터 준비를 자동화할 수 있습니다.
+스크립트를 통한 환경 설정(MaaS 게이트웨이, Operator, 대시보드 기능, DevSpaces 등)은 https://github.com/jingggg-wenn/rhoai-sno-setup-guide[RHOAI 3.5 SNO Setup Guide] 리포지토리를 참조하십시오. 빠른 워크숍 환경 설정은 https://github.com/jingggg-wenn/rhoai-sno-setup-guide/blob/main/scripts/WORKSHOP-SETUP.md[워크숍 설정 가이드]를 따르십시오 -- 두 개의 스크립트로 전체 클러스터 준비를 자동화할 수 있습니다.
 ====
 
 == 학습 목표
