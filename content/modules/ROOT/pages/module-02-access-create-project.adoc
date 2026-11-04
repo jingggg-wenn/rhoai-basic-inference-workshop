@@ -1,19 +1,19 @@
 :imagesdir: ../assets/images
 
 [#access-project]
-= Access {productname-short} and Create Your Project
+= Access {productname-short} and Your Project
 
-In this module, you will log in to the {productname-long} dashboard and create a Data Science project that serves as your workspace for deploying models and running experiments.
+In this module, you will log in to the {productname-long} dashboard and access your pre-created Data Science project, which serves as your workspace for deploying models and running experiments.
 
 == Step 2.1: Log In to {productname-short}
 
 . Open your web browser (Chrome or Firefox recommended).
 . Navigate to the *{productname-short} Dashboard URL* provided by your instructor.
-. You will be redirected to a login page. Select *htpasswd* as the login provider.
+. You will be redirected to the SSO login page.
 +
-image::ocp-rhoai-portal/img-htpasswd-login.png[Login page showing htpasswd provider,600]
-. Enter your assigned username (e.g. `user01`) and password.
-. Click *Log in*.
+image::ocp-rhoai-portal/img-login.png[SSO login page showing username and password fields,600]
+. Enter your assigned username (e.g. `user1`) and password.
+. Click *Sign In*.
 
 You should now see the *OpenShift AI Dashboard* with a left sidebar showing menu items such as Projects, AI hub, Gen AI studio, and more.
 
@@ -34,29 +34,14 @@ To switch between the *OpenShift AI Dashboard* and the *OpenShift Console* (need
 image::ocp-rhoai-portal/img-access-ocp.png[Switching between OpenShift AI and OpenShift Console]
 ====
 
-== Step 2.2: Create a New Project
+== Step 2.2: Navigate into Your Project
 
-A project (also known as a Kubernetes namespace) is your workspace where you will deploy models, create workbenches, and run experiments.
+Your project has already been created for you. It follows the same naming convention as your username. For example, if your username is `user1`, your project is also named `user1`.
 
-. Click *Projects* in the left sidebar, then click the *Create project* button (top right).
+. Click *Projects* in the left sidebar.
 +
-image::ocp-rhoai-portal/img-create-proj.png[Projects page with Create project button highlighted]
+image::ocp-rhoai-portal/img-project-list.png[Projects page listing pre-created workshop projects]
+. Find the project that matches your username.
+. Click into it.
 
-. Fill in the form:
-+
-[cols="1,2",options="header"]
-|===
-| Field | What to Enter
-
-| *Name*
-| `user-XX` (use your assigned number, for example `user-05`)
-
-| *Description*
-| `My workshop project` (optional)
-|===
-+
-image::ocp-rhoai-portal/img-create-project-1.png[Create project dialog with Name field and Create button highlighted]
-
-. Click *Create*.
-
-You should now see your project `user-XX` with tabs for Overview, Workbenches, Pipelines, Deployments, Connections, and more.
+You should now see your project with tabs for Overview, Workbenches, Pipelines, Deployments, Connections, and more.

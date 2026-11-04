@@ -1,5 +1,5 @@
 * xref:module-01-introduction.adoc#introduction[Module 1: Introduction]
-* xref:module-02-access-create-project.adoc#access-project[Module 2: Access RHOAI and Create Your Project]
+* xref:module-02-access-create-project.adoc#access-project[Module 2: Access RHOAI and Your Project]
 * xref:module-03-deploy-model.adoc#deploy-model[Module 3: Deploy a Model]
 * xref:module-04-maas-setup.adoc#maas-setup[Module 4: Set Up MaaS and API Key]
 * xref:module-05-test-playground.adoc#test-playground[Module 5: Test with AI Playground]
@@ -9,7 +9,7 @@
 
 .한국어 (Korean)
 * xref:kr/module-01-introduction.adoc#introduction-kr[1: 소개]
-* xref:kr/module-02-access-create-project.adoc#access-project-kr[2: OpenShift AI 접속 및 프로젝트 생성]
+* xref:kr/module-02-access-create-project.adoc#access-project-kr[2: OpenShift AI 접속 및 프로젝트]
 * xref:kr/module-03-deploy-model.adoc#deploy-model-kr[3: 모델 배포]
 * xref:kr/module-04-maas-setup.adoc#maas-setup-kr[4: MaaS 및 API 키 설정]
 * xref:kr/module-05-test-playground.adoc#test-playground-kr[5: AI Playground에서 테스트]

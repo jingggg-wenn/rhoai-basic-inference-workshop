@@ -1,19 +1,19 @@
 :imagesdir: ../../assets/images
 
 [#access-project-kr]
-= {productname-short} 접속 및 프로젝트 생성
+= {productname-short} 접속 및 프로젝트
 
-이 모듈에서는 {productname-long} 대시보드에 로그인하고, 모델 배포 및 실험을 위한 작업 공간으로 사용할 Data Science 프로젝트를 생성합니다.
+이 모듈에서는 {productname-long} 대시보드에 로그인하고, 모델 배포 및 실험을 위한 작업 공간으로 사전 생성된 Data Science 프로젝트에 접속합니다.
 
 == 단계 2.1: {productname-short} 로그인
 
 . 웹 브라우저를 엽니다 (Chrome 또는 Firefox 권장).
 . 강사가 제공한 *{productname-short} Dashboard URL*로 이동합니다.
-. 로그인 페이지로 리디렉션됩니다. 로그인 제공자로 *htpasswd*를 선택합니다.
+. SSO 로그인 페이지로 리디렉션됩니다.
 +
-image::ocp-rhoai-portal/img-htpasswd-login.png[htpasswd 로그인 제공자 선택,600]
-. 배정받은 사용자명(예: `user01`)과 비밀번호를 입력합니다.
-. *Log in*을 클릭합니다.
+image::ocp-rhoai-portal/img-login.png[사용자명 및 비밀번호 필드가 표시된 SSO 로그인 페이지,600]
+. 배정받은 사용자명(예: `user1`)과 비밀번호를 입력합니다.
+. *Sign In*을 클릭합니다.
 
 이제 좌측 사이드바에 Projects, AI hub, Gen AI studio 등의 메뉴 항목이 표시되는 *OpenShift AI Dashboard*가 나타납니다.
 
@@ -31,29 +31,14 @@ image::ocp-rhoai-portal/img-rhoai-portal.png[OpenShift AI Dashboard]
 image::ocp-rhoai-portal/img-access-ocp.png[OpenShift AI와 OpenShift Console 간 전환]
 ====
 
-== 단계 2.2: 새 프로젝트 생성
+== 단계 2.2: 프로젝트로 이동
 
-프로젝트(Kubernetes 네임스페이스)는 모델 배포, Workbench 생성, 실험 수행을 위한 작업 공간입니다.
+프로젝트는 이미 생성되어 있습니다. 프로젝트 이름은 사용자명과 동일한 명명 규칙을 따릅니다. 예를 들어 사용자명이 `user1`인 경우, 프로젝트 이름도 `user1`입니다.
 
-. 좌측 사이드바에서 *Projects*를 클릭한 후 우측 상단의 *Create project* 버튼을 클릭합니다.
+. 좌측 사이드바에서 *Projects*를 클릭합니다.
 +
-image::ocp-rhoai-portal/img-create-proj.png[Create project 버튼이 강조 표시된 Projects 페이지]
+image::ocp-rhoai-portal/img-project-list.png[사전 생성된 워크숍 프로젝트가 나열된 Projects 페이지]
+. 본인의 사용자명과 일치하는 프로젝트를 찾습니다.
+. 해당 프로젝트를 클릭하여 이동합니다.
 
-. 양식을 작성합니다:
-+
-[cols="1,2",options="header"]
-|===
-| 필드 | 입력 내용
-
-| *Name*
-| `user-XX` (배정받은 번호를 사용합니다. 예: `user-05`)
-
-| *Description*
-| `My workshop project` (선택 사항)
-|===
-+
-image::ocp-rhoai-portal/img-create-project-1.png[Name 필드와 Create 버튼이 강조 표시된 프로젝트 생성 대화 상자]
-
-. *Create*를 클릭합니다.
-
-이제 Overview, Workbenches, Pipelines, Deployments, Connections 등의 탭이 있는 프로젝트 `user-XX`가 표시됩니다.
+이제 Overview, Workbenches, Pipelines, Deployments, Connections 등의 탭이 있는 프로젝트가 표시됩니다.

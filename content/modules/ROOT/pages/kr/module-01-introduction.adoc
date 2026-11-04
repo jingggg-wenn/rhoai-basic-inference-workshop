@@ -14,7 +14,7 @@
 
 본 워크숍을 완료하면 다음을 수행할 수 있습니다:
 
-* {productname-short}에서 Data Science 프로젝트를 생성합니다
+* {productname-short} 포털과 사전 생성된 프로젝트에 접속합니다
 * 모델 카탈로그에서 llm-d 서빙 런타임을 사용하여 AI 모델을 배포합니다
 * 서로 다른 토큰 속도 제한(Premium 및 Basic 등급)으로 MaaS 구독을 구성합니다
 * 인증된 모델 접근을 위한 API 키를 생성합니다
@@ -33,7 +33,7 @@
 | 개요
 
 | 2
-| OpenShift AI 포털 접속 및 프로젝트 생성
+| OpenShift AI 포털 접속 및 프로젝트
 | 실습
 
 | 3

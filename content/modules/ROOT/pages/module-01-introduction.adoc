@@ -16,7 +16,7 @@ For a scripted environment setup (MaaS gateway, operators, dashboard features, D
 
 By the end of this workshop, you will be able to:
 
-* Create a Data Science project in {productname-short}
+* Access the {productname-short} portal and your pre-created project
 * Deploy an AI model from the model catalog using the llm-d serving runtime
 * Configure MaaS subscriptions with different token rate limits (premium and basic tiers)
 * Generate API keys for authenticated model access
@@ -35,7 +35,7 @@ By the end of this workshop, you will be able to:
 | Overview
 
 | 2
-| Access OpenShift AI Portal and Create Your Project
+| Access OpenShift AI Portal and Your Project
 | Hands-on
 
 | 3

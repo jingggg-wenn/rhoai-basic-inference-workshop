@@ -11,8 +11,8 @@ You have completed the hands-on portion of the Basic Inferencing workshop.
 |===
 | Module | What You Did
 
-| 2 - Access and Project Setup
-| Logged in to {productname-short} and created a Data Science project
+| 2 - Access Portal and Project
+| Logged in to {productname-short} and opened your pre-created project
 
 | 3 - Deploy a Model
 | Deployed an LLM from the model catalog using the llm-d serving runtime on a GPU node
