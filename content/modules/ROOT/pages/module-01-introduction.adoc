@@ -9,7 +9,7 @@ xref:kr/module-01-introduction.adoc#introduction-kr[한국어 버전은 여기�
 
 [TIP]
 ====
-For a scripted environment setup (MaaS gateway, operators, dashboard features, DevSpaces, and more), see the https://github.com/jingggg-wenn/rhoai-field-source-setup-guide[RHOAI 3.5 Field Source Setup Guide] repo. To enable all features, run the https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/field-source-enable-all-features-35.sh[field-source-enable-all-features-35.sh] script. For the quick workshop setup, follow the https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/WORKSHOP-SETUP.md[Workshop Setup Guide].
+For a scripted environment setup (MaaS gateway, operators, dashboard features, DevSpaces, and more), see the https://github.com/jingggg-wenn/rhoai-field-source-setup-guide[RHOAI 3.5 Field Source Setup Guide,window=_blank] repo. To enable all features, run the https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/field-source-enable-all-features-35.sh[field-source-enable-all-features-35.sh,window=_blank] script. For the quick workshop setup, follow the https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/WORKSHOP-SETUP.md[Workshop Setup Guide,window=_blank].
 ====
 
 == What You Will Learn

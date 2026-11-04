@@ -7,7 +7,7 @@
 
 [TIP]
 ====
-스크립트를 통한 환경 설정(MaaS 게이트웨이, Operator, 대시보드 기능, DevSpaces 등)은 https://github.com/jingggg-wenn/rhoai-field-source-setup-guide[RHOAI 3.5 Field Source Setup Guide] 리포지토리를 참조하십시오. 모든 기능을 활성화하려면 https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/field-source-enable-all-features-35.sh[field-source-enable-all-features-35.sh] 스크립트를 실행하십시오. 빠른 워크숍 환경 설정은 https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/WORKSHOP-SETUP_KR.md[워크숍 설정 가이드]를 따르십시오.
+스크립트를 통한 환경 설정(MaaS 게이트웨이, Operator, 대시보드 기능, DevSpaces 등)은 https://github.com/jingggg-wenn/rhoai-field-source-setup-guide[RHOAI 3.5 Field Source Setup Guide,window=_blank] 리포지토리를 참조하십시오. 모든 기능을 활성화하려면 https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/field-source-enable-all-features-35.sh[field-source-enable-all-features-35.sh,window=_blank] 스크립트를 실행하십시오. 빠른 워크숍 환경 설정은 https://github.com/jingggg-wenn/rhoai-field-source-setup-guide/blob/main/scripts/WORKSHOP-SETUP_KR.md[워크숍 설정 가이드,window=_blank]를 따르십시오.
 ====
 
 == 학습 목표
