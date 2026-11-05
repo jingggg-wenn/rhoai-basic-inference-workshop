@@ -26,11 +26,11 @@ cd rhoai-basic-inference-workshop
 
 == 단계 6.3: 환경 변수 설정
 
-본인의 네임스페이스를 설정합니다 (예: `user-05` 또는 `admin-02`):
+본인의 네임스페이스를 설정합니다 (예: `user1`, `user2`, `user3`, `user5`):
 
 [source,sh,role="execute"]
 ----
-export NAMESPACE=user-XX
+export NAMESPACE=user5
 ----
 
 == 단계 6.4: Open WebUI 배포

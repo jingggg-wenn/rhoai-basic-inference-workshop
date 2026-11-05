@@ -74,11 +74,11 @@ Before starting, confirm the following are ready:
 
 == Your User Account 
 
-Throughout this guide, you will see `user-XX` or `admin-XX`. Replace `XX` with your assigned number.
+Throughout this guide, you will see `user-XX` or `admin-XX`. Replace these placeholders with your assigned account, such as `user1`, `user2`, or `user3`.
 
 For example, if you are *user 5*, then:
 
-* `user-XX` becomes `user-05`
-* Your project name is `user-05`
+* `user-XX` becomes `user5`
+* Your project name is `user5`
 
-Always use two digits: user05 = `user-05`, admin02 = `admin-02`.
+Do not use hyphens or leading zeros: use `user5` or `admin2`.

@@ -26,11 +26,11 @@ cd rhoai-basic-inference-workshop
 
 == Step 6.3: Set Your Environment Variables
 
-Set your namespace (for example `user-05` or `admin-02`):
+Set your namespace (for example `user1`, `user2`, `user3`, or `user5`):
 
 [source,sh,role="execute"]
 ----
-export NAMESPACE=user-XX
+export NAMESPACE=user5
 ----
 
 == Step 6.4: Deploy Open WebUI
