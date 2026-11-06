@@ -48,7 +48,7 @@ image::ai-playground/img-compare-chats-ratelimited.png[Compare chat showing Chat
 This is the MaaS subscription tier system in action:
 
 * *Chat 1 (Premium)* -- `workshop-gemma4-premium` has a `10,000` token/sec rate limit, so it handles sustained conversation without throttling.
-* *Chat 2 (Basic)* -- `workshop-gemma4-basic` has a `100` token/min rate limit, so it gets rate-limited after a few exchanges and returns an error.
+* *Chat 2 (Basic)* -- `workshop-gemma4-basic` has a `5,000` token/min rate limit, so it gets rate-limited after a few exchanges and returns an error.
 
 Both chats use the same model and the same infrastructure. The only difference is the subscription tier assigned to each chat session. This is how MaaS enables administrators to provide differentiated levels of service -- premium users get higher throughput while standard users are subject to stricter quotas, all managed centrally through subscriptions without any changes to the model deployment itself.
 

@@ -97,7 +97,7 @@ image::openwebui/img-openwebui-testchat-premium.png[Premium connection generatin
 [start=1]
 . Select `BASIC.redhataigemma-4-e4b-it` from the dropdown.
 . Send a similar long prompt.
-. Notice the response may be shorter or cut off -- the basic subscription has a `100` token/min rate limit, which throttles the output.
+. Notice the response may be shorter or cut off -- the basic subscription has a `5,000` token/min rate limit, which throttles the output.
 +
 image::openwebui/img-openwebui-testchat-basic.png[Basic connection with rate-limited response]
 

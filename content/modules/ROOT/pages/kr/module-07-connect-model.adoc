@@ -97,7 +97,7 @@ image::openwebui/img-openwebui-testchat-premium.png[속도 제한 없이 긴 응
 [start=1]
 . 드롭다운에서 `BASIC.redhataigemma-4-e4b-it`을 선택합니다.
 . 유사한 긴 프롬프트를 전송합니다.
-. Basic 구독은 `100` 토큰/분의 속도 제한이 있으므로 응답이 더 짧거나 잘릴 수 있습니다.
+. Basic 구독은 `5,000` 토큰/분의 속도 제한이 있으므로 응답이 더 짧거나 잘릴 수 있습니다.
 +
 image::openwebui/img-openwebui-testchat-basic.png[속도가 제한된 Basic 연결의 응답]
 

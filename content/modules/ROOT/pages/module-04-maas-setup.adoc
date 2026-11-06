@@ -127,13 +127,13 @@ Repeat the same steps above to create a second subscription with these values:
 | Select the same deployed model
 
 | *Token rate limits*
-| `100` tokens per `1` minute
+| `5000` tokens per `1` minute
 
 | *Create authorization policy*
 | Leave checked
 |===
 
-image::maas-setup/img-maas-subs-basic.png[Basic subscription form with name, priority, group, model, and token limit]
+image::maas-setup/img-maas-subs-basic.jpeg[Basic subscription form with name, priority, group, model, and token limit]
 
 After creating both subscriptions, the *Subscriptions* tab should show two entries (`workshop-gemma4-premium` and `workshop-gemma4-basic`) both in *Ready* status.
 
