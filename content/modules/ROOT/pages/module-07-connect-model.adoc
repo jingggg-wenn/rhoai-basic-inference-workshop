@@ -88,7 +88,7 @@ image::openwebui/img-openwebui-connectedmodels.png[Model dropdown showing PREMIU
 [start=1]
 . Select `PREMIUM.redhataigemma-4-e4b-it` from the dropdown.
 . Send a longer prompt (e.g., `give me a funny joke. make it long and at least 500 words in length`).
-. The model should respond with a full, uninterrupted response -- the premium subscription has a `10,000` token/min rate limit.
+. The model should respond with a full, uninterrupted response -- the premium subscription has a `10,000` token/sec rate limit.
 +
 image::openwebui/img-openwebui-testchat-premium.png[Premium connection generating a long response without rate limiting]
 

@@ -45,7 +45,7 @@ A subscription defines which groups can access which models and sets token rate 
 
 | `workshop-gemma4-premium`
 | `20`
-| `10000` tokens / `1` minute
+| `10000` tokens / `1` second
 | High-throughput users (e.g., production workloads)
 
 | `workshop-gemma4-basic`
@@ -82,7 +82,7 @@ image::maas-setup/img-maas-governance.png[MaaS governance page showing Subscript
 | Click *Add models* and select your deployed model
 
 | *Token rate limits*
-| `50000` tokens per `1` minute
+| `10000` tokens per `1` second
 
 | *Create authorization policy*
 | Leave checked
@@ -98,7 +98,7 @@ image::maas-setup/img-maas-subs-2.png[Add models dialog showing deployed model]
 +
 image::maas-setup/img-maas-subs-3.png[Model added with Add token limit prompt]
 
-. Set the token limit to `10000` tokens per `1` minute and click *Save*.
+. Set the token limit to `10000` tokens per `1` second and click *Save*.
 +
 image::maas-setup/img-maas-subs-4.png[Edit subscription token limits dialog]
 

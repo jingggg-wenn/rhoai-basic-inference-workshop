@@ -47,7 +47,7 @@ image::ai-playground/img-compare-chats-ratelimited.png[Chat 1 Premium은 정상 
 
 이것이 MaaS 구독 등급 시스템의 동작입니다:
 
-* *Chat 1 (Premium)* -- `workshop-gemma4-premium`은 `10,000` 토큰/분의 속도 제한이 있어 스로틀링 없이 지속적인 대화를 처리합니다.
+* *Chat 1 (Premium)* -- `workshop-gemma4-premium`은 `10,000` 토큰/초의 속도 제한이 있어 스로틀링 없이 지속적인 대화를 처리합니다.
 * *Chat 2 (Basic)* -- `workshop-gemma4-basic`은 `100` 토큰/분의 속도 제한이 있어 몇 차례의 대화 후 속도가 제한되고 오류가 반환됩니다.
 
 두 채팅 모두 동일한 모델과 동일한 인프라를 사용합니다. 유일한 차이점은 각 채팅 세션에 할당된 구독 등급입니다. 이것이 MaaS를 통해 관리자가 차등화된 서비스 수준을 제공하는 방식입니다 -- Premium 사용자는 높은 처리량을 확보하고 일반 사용자는 더 엄격한 할당량이 적용되며, 모델 배포 자체에는 어떠한 변경도 필요하지 않습니다.

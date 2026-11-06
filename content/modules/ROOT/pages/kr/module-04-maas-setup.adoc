@@ -45,7 +45,7 @@ https://maas.apps.<cluster-domain>/<namespace>/<model-name>/v1
 
 | `workshop-gemma4-premium`
 | `20`
-| `10000` 토큰 / `1` 분
+| `10000` 토큰 / `1` 초
 | 높은 처리량 사용자 (예: 운영 워크로드)
 
 | `workshop-gemma4-basic`
@@ -82,7 +82,7 @@ image::maas-setup/img-maas-governance.png[Subscriptions 탭이 표시된 MaaS go
 | *Add models*를 클릭하여 배포된 모델을 선택합니다
 
 | *Token rate limits*
-| `50000` 토큰 / `1` 분
+| `10000` 토큰 / `1` 초
 
 | *Create authorization policy*
 | 선택된 상태로 유지합니다
@@ -98,7 +98,7 @@ image::maas-setup/img-maas-subs-2.png[배포된 모델이 표시된 모델 추�
 +
 image::maas-setup/img-maas-subs-3.png[Add token limit이 표시된 추가된 모델]
 
-. 토큰 제한을 `10000` 토큰 / `1` 분으로 설정하고 *Save*를 클릭합니다.
+. 토큰 제한을 `10000` 토큰 / `1` 초로 설정하고 *Save*를 클릭합니다.
 +
 image::maas-setup/img-maas-subs-4.png[구독 토큰 제한 편집 대화 상자]
 
