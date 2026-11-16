@@ -50,7 +50,7 @@ A subscription defines which groups can access which models and sets token rate 
 
 | `workshop-gemma4-basic`
 | `10`
-| `5000` tokens / `1` minute
+| `100` tokens / `1` minute
 | Standard users (e.g., workshop participants)
 |===
 
@@ -127,7 +127,7 @@ Repeat the same steps above to create a second subscription with these values:
 | Select the same deployed model
 
 | *Token rate limits*
-| `5000` tokens per `1` minute
+| `100` tokens per `1` minute
 
 | *Create authorization policy*
 | Leave checked

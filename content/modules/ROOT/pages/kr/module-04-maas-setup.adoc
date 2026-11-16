@@ -50,7 +50,7 @@ https://maas.apps.<cluster-domain>/<namespace>/<model-name>/v1
 
 | `workshop-gemma4-basic`
 | `10`
-| `5000` 토큰 / `1` 분
+| `100` 토큰 / `1` 분
 | 일반 사용자 (예: 워크숍 참가자)
 |===
 
@@ -127,7 +127,7 @@ image::maas-setup/img-maas-subs-5.png[제출 준비가 완료된 구독 양식]
 | 동일한 배포된 모델을 선택합니다
 
 | *Token rate limits*
-| `5000` 토큰 / `1` 분
+| `100` 토큰 / `1` 분
 
 | *Create authorization policy*
 | 선택된 상태로 유지합니다
