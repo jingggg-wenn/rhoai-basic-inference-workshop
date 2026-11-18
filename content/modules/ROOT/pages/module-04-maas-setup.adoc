@@ -43,18 +43,20 @@ A subscription defines which groups can access which models and sets token rate 
 |===
 | Subscription | Priority | Token Rate Limit | Use Case
 
-| `workshop-gemma4-premium`
+| `userX-workshop-gemma4-premium`
 | `20`
 | `10000` tokens / `1` second
 | High-throughput users (e.g., production workloads)
 
-| `workshop-gemma4-basic`
+| `userX-workshop-gemma4-basic`
 | `10`
 | `100` tokens / `1` minute
 | Standard users (e.g., workshop participants)
 |===
 
 Higher priority means the subscription is preferred when a user belongs to multiple groups.
+
+NOTE: Replace `userX` with your assigned user ID so that subscription and API key names are unique across participants. For example, `user5` creates `user5-workshop-gemma4-premium` and `user5-apikey-premium`.
 
 === Create the Premium subscription
 
@@ -70,7 +72,7 @@ image::maas-setup/img-maas-governance.png[MaaS governance page showing Subscript
 | Field | Value
 
 | *Name*
-| `workshop-gemma4-premium`
+| `userX-workshop-gemma4-premium`
 
 | *Priority*
 | `20`
@@ -115,7 +117,7 @@ Repeat the same steps above to create a second subscription with these values:
 | Field | Value
 
 | *Name*
-| `workshop-gemma4-basic`
+| `userX-workshop-gemma4-basic`
 
 | *Priority*
 | `10`
@@ -135,7 +137,7 @@ Repeat the same steps above to create a second subscription with these values:
 
 image::maas-setup/img-maas-subs-basic.jpeg[Basic subscription form with name, priority, group, model, and token limit]
 
-After creating both subscriptions, the *Subscriptions* tab should show two entries (`workshop-gemma4-premium` and `workshop-gemma4-basic`) both in *Ready* status.
+After creating both subscriptions, the *Subscriptions* tab should show two entries (`userX-workshop-gemma4-premium` and `userX-workshop-gemma4-basic`) both in *Ready* status.
 
 image::maas-setup/img-maas-subs-6.png[Subscriptions tab showing both premium and basic in Ready status]
 
@@ -162,10 +164,10 @@ image::maas-setup/img-apikey-1.png[Gen AI Studio API keys page]
 | Field | Value
 
 | *Name*
-| `apikey-premium`
+| `userX-apikey-premium`
 
 | *Subscription*
-| Select `workshop-gemma4-premium`
+| Select `userX-workshop-gemma4-premium`
 
 | *Expiration*
 | `30 days`
@@ -190,10 +192,10 @@ Repeat the same steps to create a second API key:
 | Field | Value
 
 | *Name*
-| `apikey-basic`
+| `userX-apikey-basic`
 
 | *Subscription*
-| Select `workshop-gemma4-basic`
+| Select `userX-workshop-gemma4-basic`
 
 | *Expiration*
 | `30 days`
