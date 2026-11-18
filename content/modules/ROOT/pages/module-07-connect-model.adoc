@@ -41,7 +41,7 @@ image::openwebui/img-openwebui-settings.png[Admin Settings showing Connections p
 +
 image::openwebui/img-openwebui-addconnection.png[Add Connection button in Connections page]
 
-. In the *URL* field, paste the model endpoint URL from Step 7.1. Make sure it ends with `/v1`. In the *API Key* field, paste the *premium* API key (`apikey-premium`) from Module 4. Set the *Prefix ID* to `PREMIUM` so you can distinguish this connection in the model dropdown.
+. In the *URL* field, paste the model endpoint URL from Step 7.1. Make sure it ends with `/v1`. In the *API Key* field, paste the *premium* API key (`userX-apikey-premium`) from Module 4. Set the *Prefix ID* to `PREMIUM` so you can distinguish this connection in the model dropdown.
 +
 image::openwebui/img-openwebui-modelendpoint-premium.png[Premium connection with URL, API key, and PREMIUM prefix]
 +
@@ -64,7 +64,7 @@ image::openwebui/img-temp-api-key.png[Temporary API key generated with copy butt
 
 . Click *Save*. The connection should show a *green toggle* -- this means Open WebUI successfully connected and discovered your model.
 
-. Repeat the process: click *Add Connection* again. Use the same URL but paste the *basic* API key (`apikey-basic`) this time. Set the *Prefix ID* to `BASIC`.
+. Repeat the process: click *Add Connection* again. Use the same URL but paste the *basic* API key (`userX-apikey-basic`) this time. Set the *Prefix ID* to `BASIC`.
 +
 image::openwebui/img-openwebui-modelendpoint-basic.png[Basic connection with URL, API key, and BASIC prefix]
 

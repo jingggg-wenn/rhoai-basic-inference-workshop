@@ -41,7 +41,7 @@ image::openwebui/img-openwebui-settings.png[Connections 페이지가 표시된 A
 +
 image::openwebui/img-openwebui-addconnection.png[Connections 페이지의 Add Connection 버튼]
 
-. *URL* 필드에 단계 7.1에서 확인한 모델 엔드포인트 URL을 붙여넣습니다. URL이 `/v1`로 끝나는지 확인합니다. *API Key* 필드에 모듈 4에서 생성한 *Premium* API 키(`apikey-premium`)를 붙여넣습니다. *Prefix ID*를 `PREMIUM`으로 설정하여 모델 드롭다운에서 이 연결을 구분할 수 있도록 합니다.
+. *URL* 필드에 단계 7.1에서 확인한 모델 엔드포인트 URL을 붙여넣습니다. URL이 `/v1`로 끝나는지 확인합니다. *API Key* 필드에 모듈 4에서 생성한 *Premium* API 키(`userX-apikey-premium`)를 붙여넣습니다. *Prefix ID*를 `PREMIUM`으로 설정하여 모델 드롭다운에서 이 연결을 구분할 수 있도록 합니다.
 +
 image::openwebui/img-openwebui-modelendpoint-premium.png[URL, API 키, PREMIUM 접두사가 설정된 Premium 연결]
 +
@@ -64,7 +64,7 @@ image::openwebui/img-temp-api-key.png[복사 버튼이 있는 생성된 임시 A
 
 . *Save*를 클릭합니다. 연결이 *녹색 토글*로 표시되어야 합니다 -- 이는 Open WebUI가 모델에 성공적으로 연결하여 모델을 검색했음을 의미합니다.
 
-. 동일한 과정을 반복합니다: *Add Connection*을 다시 클릭합니다. 동일한 URL을 사용하되, 이번에는 *Basic* API 키(`apikey-basic`)를 붙여넣습니다. *Prefix ID*를 `BASIC`으로 설정합니다.
+. 동일한 과정을 반복합니다: *Add Connection*을 다시 클릭합니다. 동일한 URL을 사용하되, 이번에는 *Basic* API 키(`userX-apikey-basic`)를 붙여넣습니다. *Prefix ID*를 `BASIC`으로 설정합니다.
 +
 image::openwebui/img-openwebui-modelendpoint-basic.png[URL, API 키, BASIC 접두사가 설정된 Basic 연결]
 
