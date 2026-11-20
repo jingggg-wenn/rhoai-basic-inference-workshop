@@ -11,6 +11,10 @@ Navigate to *Gen AI Studio* > *AI asset endpoints* in the left sidebar. Your dep
 
 image::ai-playground/img-try-in-playground.png[AI asset endpoints page showing the model in Ready status with Try in playground button]
 
+The *Configure playground* dialog opens. Make sure the checkbox next to your deployed model (e.g., `RedHatAI/gemma-4-E4B-it`) is selected and the *Type* is set to `Inference`. Leave the other settings at their defaults, then click *Create*.
+
+image::ai-playground/img-create-playground.png[Configure playground dialog with the deployed model selected and the Create button highlighted]
+
 NOTE: The Playground environment may take a few minutes to provision when accessed for the first time. Wait for it to finish loading before sending any prompts.
 
 Once the Playground loads, the settings panel on the right shows the *Model*, *Subscription*, *Temperature*, and *Streaming* controls.
