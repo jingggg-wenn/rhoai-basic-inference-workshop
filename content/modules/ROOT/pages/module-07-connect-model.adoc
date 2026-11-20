@@ -45,7 +45,7 @@ image::openwebui/img-openwebui-addconnection.png[Add Connection button in Connec
 +
 image::openwebui/img-openwebui-modelendpoint-premium.png[Premium connection with URL, API key, and PREMIUM prefix]
 +
-IMPORTANT: The URL must end with `/v1` (e.g., `https://maas.apps.<cluster>/user-XX/<model-name>/v1`). The API key is required for authentication through the MaaS gateway.
+IMPORTANT: The URL must end with `/v1` (e.g., `https://maas.apps.<cluster>/userX/<model-name>/v1`). The API key is required for authentication through the MaaS gateway.
 +
 [TIP]
 ====

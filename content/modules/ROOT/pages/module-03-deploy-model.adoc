@@ -27,7 +27,7 @@ From the model card, click the *Deploy model* button in the top-right corner.
 
 image::model-deployment/img-deploy-gemma4-model.png[Deploy model button on the Gemma 4 model card]
 
-This opens the *Deploy a model* wizard. In the first step (*Preconfigure deployment*), select your project (`user-XX`) from the *Project* dropdown, then click *Next*.
+This opens the *Deploy a model* wizard. In the first step (*Preconfigure deployment*), select your project (`userX`) from the *Project* dropdown, then click *Next*.
 
 image::model-deployment/img-model-deployment-form-1.png[Select your project in the deployment wizard]
 
@@ -48,6 +48,9 @@ Configure the deployment settings. The key fields to verify:
 | *Model deployment name*
 | Auto-populated (e.g., `RedHatAI/gemma-4-E4B-it`)
 
+| *Description*
+| Enter your username, `userX` (e.g., `user5`)
+
 | *Deployment method*
 | Select *LLM inference service with llm-d*
 
@@ -67,7 +70,9 @@ Configure the deployment settings. The key fields to verify:
 | `1`
 |===
 
-image::model-deployment/img-model-deployment-form-3-1.png[Model deployment name and deployment method selection with llm-d]
+TIP: Every participant deploys the same model, so many deployments share the name `RedHatAI/gemma-4-E4B-it`. Putting your username in the *Description* field makes it easier to spot your own deployment and endpoint in later modules.
+
+image::model-deployment/img-model-deployment-form-3-1.png[Model deployment name, description with username, and deployment method selection with llm-d]
 
 image::model-deployment/img-model-deployment-form-3-2.png[Topology, hardware profile, routing, and replica count settings]
 

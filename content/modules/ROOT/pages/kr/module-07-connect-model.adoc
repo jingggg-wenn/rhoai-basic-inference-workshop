@@ -45,7 +45,7 @@ image::openwebui/img-openwebui-addconnection.png[Connections 페이지의 Add Co
 +
 image::openwebui/img-openwebui-modelendpoint-premium.png[URL, API 키, PREMIUM 접두사가 설정된 Premium 연결]
 +
-IMPORTANT: URL은 반드시 `/v1`로 끝나야 합니다 (예: `https://maas.apps.<cluster>/user-XX/<model-name>/v1`). MaaS 게이트웨이를 통한 인증에 API 키가 필요합니다.
+IMPORTANT: URL은 반드시 `/v1`로 끝나야 합니다 (예: `https://maas.apps.<cluster>/userX/<model-name>/v1`). MaaS 게이트웨이를 통한 인증에 API 키가 필요합니다.
 +
 [TIP]
 ====

@@ -92,7 +92,7 @@ image::maas-setup/img-maas-governance.png[Subscriptions 탭이 표시된 MaaS go
 +
 image::maas-setup/img-maas-subs-1.png[이름, 우선순위, 그룹이 입력된 구독 생성 양식]
 
-. *Add models*를 클릭하여 모델 선택 대화 상자를 엽니다. 관리자 권한으로 다른 네임스페이스에 배포된 모델이 표시될 수 있습니다. 반드시 본인의 고유 네임스페이스(`user-XX`)에 배포된 모델을 선택한 후 *Add models*를 클릭합니다.
+. *Add models*를 클릭하여 모델 선택 대화 상자를 엽니다. 관리자 권한으로 다른 네임스페이스에 배포된 모델이 표시될 수 있습니다. 반드시 본인의 고유 네임스페이스(`userX`)에 배포된 모델을 선택한 후 *Add models*를 클릭합니다.
 +
 image::maas-setup/img-maas-subs-2.png[배포된 모델이 표시된 모델 추가 대화 상자]
 
